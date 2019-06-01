@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css" />
+
+</head>
+
+<body>
+
+    <main id="mainContainer" class="container">
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- -------------------------- Left Side ---------------------------- -->
+        <!-- ----------------------------------------------------------------- -->
+        <section class="left_side ">
+            <div>
+                <h1 id="title">Let's create <span>your own</span>
+
+                    <br>
+                    <span id="linkType" class="whatsApp" onclick="linkTypes()">WhatsApp</span> link.
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <li onclick="linkTypeWhatsApp()"><a>WhatsApp</a></li>
+                        <li onclick="linkTypeShort()"><a>Short</a></li>
+                    </div>
+                </h1>
+
+                <!-- ----------------------------------------------------------------- -->
+                <!-- ------------------------ Form WhatsApp -------------------------- -->
+                <!-- ----------------------------------------------------------------- -->
+                <form id="whatsApp-form" action="" class="fadeIn animated faster">
+                    <div class="email-sending">
+                        <select name="" id="">
+                            <option value="" selected>Send Link To</option>
+                            <option value="">Don't Send</option>
+                        </select>
+                        <!-- -------------------------- Email Field --------------------------- -->
+                        <input id="email" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="phoneNumber ">
+                        <h6>+966</h6>
+                        <!-- -------------------------- Phone Number Field --------------------------- -->
+                        <input id="phone_number" type="number" min="0" placeholder="Phone">
+                        <div id="info-number">
+                            <svg viewBox="0 0 111.577 111.577">
+                                <g>
+                                    <path fill=#b2b2b2
+                                        d="M78.962,99.536l-1.559,6.373c-4.677,1.846-8.413,3.251-11.195,4.217c-2.785,0.969-6.021,1.451-9.708,1.451
+                                   c-5.662,0-10.066-1.387-13.207-4.142c-3.141-2.766-4.712-6.271-4.712-10.523c0-1.646,0.114-3.339,0.351-5.064
+                                   c0.239-1.727,0.619-3.672,1.139-5.846l5.845-20.688c0.52-1.981,0.962-3.858,1.316-5.633c0.359-1.764,0.532-3.387,0.532-4.848
+                                   c0-2.642-0.547-4.49-1.636-5.529c-1.089-1.036-3.167-1.562-6.252-1.562c-1.511,0-3.064,0.242-4.647,0.71
+                                   c-1.59,0.47-2.949,0.924-4.09,1.346l1.563-6.378c3.829-1.559,7.489-2.894,10.99-4.002c3.501-1.111,6.809-1.667,9.938-1.667
+                                   c5.623,0,9.962,1.359,13.009,4.077c3.047,2.72,4.57,6.246,4.57,10.591c0,0.899-0.1,2.483-0.315,4.747
+                                   c-0.21,2.269-0.601,4.348-1.171,6.239l-5.82,20.605c-0.477,1.655-0.906,3.547-1.279,5.676c-0.385,2.115-0.569,3.731-0.569,4.815
+                                   c0,2.736,0.61,4.604,1.833,5.597c1.232,0.993,3.354,1.487,6.368,1.487c1.415,0,3.025-0.251,4.814-0.744
+                                   C76.854,100.348,78.155,99.915,78.962,99.536z M80.438,13.03c0,3.59-1.353,6.656-4.072,9.177c-2.712,2.53-5.98,3.796-9.803,3.796
+                                   c-3.835,0-7.111-1.266-9.854-3.796c-2.738-2.522-4.11-5.587-4.11-9.177c0-3.583,1.372-6.654,4.11-9.207
+                                   C59.447,1.274,62.729,0,66.563,0c3.822,0,7.091,1.277,9.803,3.823C79.087,6.376,80.438,9.448,80.438,13.03z" />
+                                </g>
+
+                            </svg>
+
+                        </div>
+
+
+                    </div>
+                    <div class="send-text">
+                        <div>
+                            <h6>B</h6>
+                            <h6>I</h6>
+                            <h6>S</h6>
+                        </div>
+                        <!-- -------------------------- TextArea Field --------------------------- -->
+                        <textarea onkeyup="showTextOnPhone()" name="" id="textArea"
+                            placeholder="Your message here"></textarea>
+                    </div>
+
+
+                    <div class="btns ">
+                        <h6 id="btn-moreOptions" href="" onclick="showModel()">More Options</h6>
+                        <div id="modelBack" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  ">
+                                <div class="modelheader">
+                                    <h1>Options</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
+                                </div>
+                                <h1>Custom Link</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+                                    <!-- -------------------------- Custom Link Field --------------------------- -->
+                                    <input id="phone_number" type="text">
+                                </div>
+                                <h4>Use "_" or "-" instead of a space</h4>
+                                <div class="saveChangesContainer">
+                                    <h6>SAVE CHANGES</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll" href="#" onclick="conformReset()">RESET ALL</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3>Do you want to clear all data?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="resetFields()">Yes</button> <button class="no"
+                                    onclick="dontResetFields()">No</button>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink" href="" onclick="conformGenerate()">GENERATE LINK</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3>Link will be generated, do you want to continue?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="generateLink()">Yes</button> <button class="no"
+                                    onclick="dontGenerateLink()">No</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+
+                <!-- ----------------------------------------------------------------- -->
+                <!-- -------------------------- Form Short --------------------------- -->
+                <!-- ----------------------------------------------------------------- -->
+                <form id="short-form" action="" class="fadeIn animated faster">
+                    <div class="email-sending">
+                        <select name="" id="">
+                            <option value="" selected>Send Link To</option>
+                            <option value="">Don't Send</option>
+                        </select>
+                        <!-- -------------------------- Email Field --------------------------- -->
+                        <input id="email2" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="url-input">
+
+                        <!-- -------------------------- URL Field --------------------------- -->
+                        <input id="url-Input" type="text" min="0" placeholder="Enter your URL Here ...">
+
+                    </div>
+
+
+                    <div class="btns">
+                        <h6 id="btn-moreOptions2" href="" onclick="showModel2()">More Options</h6>
+                        <div id="modelBack2" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  ">
+                                <div class="modelheader">
+                                    <h1>Options</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn2()">&times;</span>
+                                </div>
+                                <h1>Custom Link</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+                                    <!-- -------------------------- Custom Link Field --------------------------- -->
+                                    <input id="phone_number" type="text">
+                                </div>
+                                <h4>Use "_" or "-" instead of a space</h4>
+                                <div class="saveChangesContainer">
+                                    <h6>SAVE CHANGES</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll2" href="#" onclick="conformReset2()">RESET ALL</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3>Do you want to clear all data?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="resetFields2()">Yes</button> <button class="no"
+                                    onclick="dontResetFields2()">No</button>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">GENERATE LINK</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3>Link will be generated, do you want to continue?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="generateLink2()">Yes</button> <button class="no"
+                                    onclick="dontGenerateLink2()">No</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+                <div class="mark">
+                    <h1>Powered By<a href=""> Your Company name</a></h1>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- -------------------------- Right Side --------------------------- -->
+        <!-- ----------------------------------------------------------------- -->
+
+        <section class=" right_side">
+            <div class="preview">
+                <h1 onclick="previewTypes()">Preview <div id="dropdown-menu2" class="dropdown-menu2">
+                        <li onclick="viewAsSender()"><a>View as Sender</a></li>
+                        <li onclick="viewAsResiever()"><a>View as Resiever</a></li>
+                    </div>
+                </h1>
+
+                <h2 id="lang">AR</h2>
+            </div>
+
+            <!-- ----------------------------------------------------------------- -->
+            <!-- -------------------------- Phone View ---------------------------- -->
+            <!-- ----------------------------------------------------------------- -->
+            <div class="phone">
+                <div class="header">
+                    <img id="person" src="img/person.png" alt="">
+                    <h1 id="phone_numberfield">+966551245093</h1>
+                    <img id="icons" src="img/icons.png" alt="">
+                </div>
+                <div class="messages">
+                    <div id="right_message" class="right_message">
+                        <img src="img/tail_right.png" height="30px" alt="">
+                        <div class="container_right">
+                            <p id="right_message_text">show text here</p><span><svg id="Layer_1"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15">
+                                    <path fill="#4FC3F7"
+                                        d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z">
+                                    </path>
+                                </svg> 3:45AM</span>
+                        </div>
+                    </div>
+
+                    <div id="left_message" class="left_message">
+                        <img src="img/tail_left.png" height="30px" alt="">
+                        <div class="container_left">
+                            <p id="left_message_text">show text here</p>
+                            <span>3:45AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="resultPage" class="resultPage fadeIn animated faster">
+            <div class="mainContainer">
+                <h1>Site Name</h1>
+                <hr>
+                <div class="subContainer">
+                    <h1>There is your Link !!</h1>
+                    <div class="resultLink">
+                        <svg id="copy_button" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="561px" height="561px"
+                            viewBox="0 0 561 561" style="enable-background:new 0 0 561 561;" xml:space="preserve">
+                            <g>
+                                <g id="content-copy">
+                                    <path d="M395.25,0h-306c-28.05,0-51,22.95-51,51v357h51V51h306V0z M471.75,102h-280.5c-28.05,0-51,22.95-51,51v357
+                                   c0,28.05,22.95,51,51,51h280.5c28.05,0,51-22.95,51-51V153C522.75,124.95,499.8,102,471.75,102z M471.75,510h-280.5V153h280.5V510
+                                   z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <h6>https://YourDomain .com/ascwr54</h6>
+                    </div>
+
+                    <div class="resultTypes">
+                        <artical><img src="img/link-logo.png" alt="">
+                            <h4>LINK</h4>
+                        </artical>
+                        <artical><img src="img/barcode-logo.png" alt="">
+                            <h4>QRCODE</h4>
+                        </artical>
+                        <artical><img src="img/html-logo.png" alt="">
+                            <h4>HTML</h4>
+                        </artical>
+                    </div>
+
+                    <h3 id="hideSection3">Back to Generator</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <script>
+
+        //-----------------------------------------------------------------------------
+        //----------------------- show (More Option)  pop up ---------------------------
+        //-----------------------------------------------------------------------------
+
+
+
+        function showModel() {
+            var modelBack = document.getElementById("modelBack");
+
+            modelBack.style.display = 'block';
+
+        }
+        function closeModelBtn() {
+            var modelBack = document.getElementById("modelBack");
+
+            modelBack.style.display = 'none';
+        }
+
+
+
+        //-----------------------------------------------------------------------------
+
+
+        //-----------------------------------------------------------------------------
+        //----------------------- show (More Option Form 2)  pop up ---------------------------
+        //-----------------------------------------------------------------------------
+
+
+        window.addEventListener('click', outSidemodel);
+
+        function showModel2() {
+            var modelBack2 = document.getElementById("modelBack2");
+
+            modelBack2.style.display = 'block';
+
+        }
+        function closeModelBtn2() {
+            var modelBack2 = document.getElementById("modelBack2");
+            modelBack2.style.display = 'none';
+        }
+
+        // for both form 1 listnear
+        function outSidemodel(e) {
+            var modelBack2 = document.getElementById("modelBack2");
+            var modelBack = document.getElementById("modelBack");
+
+            if (e.target == modelBack) {
+                modelBack.style.display = 'none';
+            }
+            if (e.target == modelBack2) {
+                modelBack2.style.display = 'none';
+            }
+        }
+
+        //-----------------------------------------------------------------------------
+
+
+        //-----------------------------------------------------------------------------
+        //----------------------- show (RESET) conform pop up ---------------------------
+        //-----------------------------------------------------------------------------
+
+        var resetConformShown = false;
+        function conformReset() {
+            var resetConform = document.getElementsByClassName("resetAllConform");
+            var btnReset = document.getElementById("btn-resetAll");
+            var rect = btnReset.getBoundingClientRect();
+            var rect2 = resetConform[0].getBoundingClientRect();
+
+
+            if (!resetConformShown) {
+
+
+
+                if (window.innerWidth <= 450) {
+
+
+
+                } else {
+                    resetConform[0].style.top = rect.top - 110 + "px";
+                    resetConform[0].style.left = rect.left - 100 + "px";
+                }
+                resetConform[0].style.display = 'block';
+                resetConformShown = true;
+            } else {
+                resetConform[0].style.display = 'none';
+                resetConformShown = false;
+            }
+
+
+        }
+
+        function resetFields() {
+            var textarea = document.getElementById("textArea");
+            var resetConform = document.getElementsByClassName("resetAllConform");
+            var btnReset = document.getElementById("btn-resetAll");
+            textarea.value = "";
+            showTextOnPhone();
+
+            document.getElementById("phone_number").value = "";
+            document.getElementById("email").value = "";
+
+
+
+            resetConform[0].style.display = 'none';
+            resetConformShown = false;
+
+        }
+
+        function dontResetFields() {
+            var resetConform = document.getElementsByClassName("resetAllConform");
+            resetConform[0].style.display = 'none';
+            resetConformShown = false;
+        }
+
+        //-----------------------------------------------------------------------------
+
+
+        //-----------------------------------------------------------------------------
+        //----------------------- show (GENERATE) conform pop up ---------------------------
+        //-----------------------------------------------------------------------------
+
+        var generateConformShown = false;
+        function conformGenerate() {
+            var generateConform = document.getElementsByClassName("generateConform");
+            var btnGenerate = document.getElementById("btn-generateLink");
+            var rect = btnGenerate.getBoundingClientRect();
+            var rect2 = generateConform[0].getBoundingClientRect();
+
+
+            if (!generateConformShown) {
+
+                if (window.innerWidth <= 450) {
+
+
+
+                } else {
+
+                    generateConform[0].style.top = rect.top - 110 + "px";
+                    generateConform[0].style.left = rect.left - 150 + "px";
+
+                }
+
+                generateConform[0].style.display = 'block';
+                generateConformShown = true;
+            } else {
+                generateConform[0].style.display = 'none';
+                generateConformShown = false;
+            }
+
+
+        }
+
+
+        document.getElementById("hideSection3").addEventListener('click', hideSection3);
+        var section3 = document.getElementById("resultPage");
+
+        function hideSection3() {
+
+            section3.style.display = 'none';
+
+        }
+        function generateLink() {
+
+            var generateConform = document.getElementsByClassName("generateConform");
+            section3.style.display = 'block';
+            generateConform[0].style.display = 'none';
+            generateConformShown = false;
+
+
+
+
+        }
+
+        function dontGenerateLink() {
+            var generateConform = document.getElementsByClassName("generateConform");
+
+            generateConform[0].style.display = 'none';
+            generateConformShown = false;
+
+        }
+        //-----------------------------------------------------------------------------
+
+
+        //-----------------------------------------------------------------------------
+        //-------------------- show (RESET Form 2) conform pop up ---------------------
+        //-----------------------------------------------------------------------------
+
+        var resetConformShown2 = false;
+        function conformReset2() {
+            var resetConform = document.getElementsByClassName("resetAllConform");
+            var btnReset2 = document.getElementById("btn-resetAll2");
+            var rect = btnReset2.getBoundingClientRect();
+            var rect2 = resetConform[1].getBoundingClientRect();
+
+
+            if (!resetConformShown2) {
+
+
+
+                if (window.innerWidth <= 450) {
+
+
+
+                } else {
+                    resetConform[1].style.top = rect.top - 110 + "px";
+                    resetConform[1].style.left = rect.left - 100 + "px";
+                }
+                resetConform[1].style.display = 'block';
+                resetConformShown2 = true;
+            } else {
+                resetConform[1].style.display = 'none';
+                resetConformShown2 = false;
+            }
+
+
+        }
+
+        function resetFields2() {
+            var textarea = document.getElementById("textArea");
+            var resetConform = document.getElementsByClassName("resetAllConform");
+            textarea.value = "";
+            showTextOnPhone();
+
+            document.getElementById("url-Input").value = "";
+            document.getElementById("email2").value = "";
+
+
+
+            resetConform[1].style.display = 'none';
+            resetConformShown2 = false;
+
+        }
+
+        function dontResetFields2() {
+            var resetConform = document.getElementsByClassName("resetAllConform");
+            resetConform[1].style.display = 'none';
+            resetConformShown2 = false;
+        }
+
+        //-----------------------------------------------------------------------------
+
+
+        //-----------------------------------------------------------------------------
+        //------------------ show (GENERATE Form 2) conform pop up --------------------
+        //-----------------------------------------------------------------------------
+
+        var generateConformShown2 = false;
+        function conformGenerate2() {
+            var generateConform = document.getElementsByClassName("generateConform");
+            var btnGenerate2 = document.getElementById("btn-generateLink2");
+            var rect = btnGenerate2.getBoundingClientRect();
+            var rect2 = generateConform[1].getBoundingClientRect();
+
+
+            if (!generateConformShown2) {
+
+                if (window.innerWidth <= 450) {
+
+
+
+                } else {
+
+                    generateConform[1].style.top = rect.top - 110 + "px";
+                    generateConform[1].style.left = rect.left - 150 + "px";
+
+                }
+
+                generateConform[1].style.display = 'block';
+                generateConformShown2 = true;
+            } else {
+                generateConform[1].style.display = 'none';
+                generateConformShown2 = false;
+            }
+
+
+        }
+
+
+        function generateLink2() {
+            var generateConform = document.getElementsByClassName("generateConform");
+            section3.style.display = 'block';
+            generateConform[0].style.display = 'none';
+            generateConformShown = false;
+
+        }
+
+        function dontGenerateLink2() {
+            var generateConform = document.getElementsByClassName("generateConform");
+            generateConform[1].style.display = 'none';
+            generateConformShown2 = false;
+
+        }
+        //-----------------------------------------------------------------------------
+
+
+
+        //-----------------------------------------------------------------------------
+        //-------------------- toggle preview type and show text ----------------------
+        //-----------------------------------------------------------------------------
+        var preview = document.getElementById("dropdown-menu2");
+        var shown_preview = false;
+
+
+        var senderView = document.getElementById("right_message");
+        var resieverView = document.getElementById("left_message");
+
+        var senderViewText = document.getElementById("right_message_text");
+        var resieverViewText = document.getElementById("left_message_text");
+
+
+
+        function previewTypes() {
+
+            if (shown_preview) {
+                preview.style.display = 'none';
+                shown_preview = false;
+            } else {
+                preview.style.display = 'block';
+                shown_preview = true;
+            }
+
+        }
+
+        function viewAsSender() {
+            preview.style.display = 'none';
+
+            senderView.style.display = 'flex';
+            resieverView.style.display = 'none';
+
+        }
+
+        function viewAsResiever() {
+            preview.style.display = 'none';
+
+            senderView.style.display = 'none';
+            resieverView.style.display = 'flex';
+
+        }
+
+        function showTextOnPhone() {
+            var textarea = document.getElementById("textArea");
+
+            if (textarea.value.length <= 2) {
+                senderViewText.innerHTML = 'show text here';
+                resieverViewText.innerHTML = 'show text here';
+                return;
+            }
+            senderViewText.innerHTML = textarea.value;
+            resieverViewText.innerHTML = textarea.value;
+        }
+        //-----------------------------------------------------------------------------
+
+
+
+        //-----------------------------------------------------------------------------
+        //-------- show menu types and form changeing between whats and short ---------
+        //-----------------------------------------------------------------------------
+
+        var shown_menu = false;
+
+        var whatsAppForm = document.getElementById("whatsApp-form");
+        var shortForm = document.getElementById("short-form");
+
+
+        function linkTypes() {
+            var menu = document.getElementById("dropdown-menu");
+
+            if (shown_menu) {
+                menu.style.display = 'none';
+                shown_menu = false;
+            } else {
+                menu.style.display = 'block';
+                shown_menu = true;
+            }
+
+        }
+
+        function linkTypeWhatsApp() {
+            var menu = document.getElementById("dropdown-menu");
+
+            var linkType = document.getElementById("linkType");
+            menu.style.display = 'none';
+            shown_menu = false;
+
+            whatsAppForm.style.display = 'block';
+            shortForm.style.display = 'none';
+
+            if (!languageAR) {
+                linkType.innerHTML = 'WhatsApp';
+            } else {
+                linkType.innerHTML = 'الواتس اب';
+
+            }
+            linkType.style.color = '#1ebea5';
+
+
+        }
+
+        function linkTypeShort() {
+            var menu = document.getElementById("dropdown-menu");
+
+            var linkType = document.getElementById("linkType");
+
+            menu.style.display = 'none';
+            shown_menu = false;
+
+            whatsAppForm.style.display = 'none';
+            shortForm.style.display = 'block';
+
+            if (!languageAR) {
+                linkType.innerHTML = 'Short';
+            } else {
+                linkType.innerHTML = 'مختصر';
+
+            }
+            linkType.style.color = '#39065a';
+
+        }
+        //-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+        //-----------------------------------------------------------------------------
+        //---------------------------- Language Transform -----------------------------
+        //-----------------------------------------------------------------------------
+
+
+        var languageAR = false;
+        var langBtn = document.getElementById("lang");
+        langBtn.addEventListener('click', toggleLanguage);
+
+
+        var areaChange = document.getElementById("mainContainer");
+
+        var title = document.getElementById("title");
+
+        var whatsForm = document.getElementById("whatsApp-form");
+        var shortForm = document.getElementById("short-form");
+
+
+
+        function toggleLanguage() {
+
+            if (!languageAR) {
+                langBtn.innerHTML = 'EN';
+                areaChange.classList.add("container-AR");
+
+
+                title.style.direction = 'rtl'
+                title.innerHTML = titleInside_AR;
+
+                whatsForm.innerHTML = formWhatsApp_AR;
+
+                shortForm.innerHTML = shortForm_AR;
+
+
+
+                languageAR = true;
+            } else {
+                langBtn.innerHTML = 'AR';
+                areaChange.classList.remove("container-AR");
+
+
+                title.style.direction = 'ltr'
+                title.innerHTML = titleInside_EN;
+
+                whatsForm.innerHTML = formWhatsApp_EN;
+
+                shortForm.innerHTML = shortForm_EN;
+
+
+
+
+
+                languageAR = false;
+
+            }
+
+
+
+
+            //-----------------------------------------------------------------------------
+            //---------------------------- tooltip for info icon --------------------------
+            //-----------------------------------------------------------------------------
+
+            if (!languageAR) {
+                tippy('#info-number', {
+                    content: 'For your information .. this phone number must have an active account on WhatsApp',
+                    theme: 'light',
+                });
+            } else {
+                tippy('#info-number', {
+                    content: 'لمعلوماتك... لابد ان يكون هذا الرقم حساب فعال على الواتس',
+                    theme: 'light',
+                });
+            }
+            //-----------------------------------------------------------------------------
+
+            //-----------------------------------------------------------------------------
+            //---------------------------- tooltip for Copy icon --------------------------
+            //-----------------------------------------------------------------------------
+
+            if (!languageAR) {
+                tippy('#copy_button', {
+                    content: 'Copied !',
+                    theme: 'light',
+                    trigger: 'click',
+                    duration: 250,
+
+                });
+            } else {
+                tippy('#copy_button', {
+                    content: 'تم النسخ',
+                    theme: 'light',
+                    trigger: 'click',
+                    duration: 250,
+
+                });
+            }
+
+
+
+            //-----------------------------------------------------------------------------
+
+        }
+
+
+
+
+        var titleInside_EN = `Let's create <span>your own</span>
+
+            <br>
+            <span id="linkType" class="whatsApp" onclick="linkTypes()">WhatsApp</span> link.
+            <div id="dropdown-menu" class="dropdown-menu">
+                <li onclick="linkTypeWhatsApp()"><a>WhatsApp</a></li>
+                <li onclick="linkTypeShort()"><a>Short</a></li>
+            </div>`
+
+
+        var titleInside_AR = `لنبني<span> رابط</span>
+
+            <br>
+            <span id="linkType" class="whatsApp" onclick="linkTypes()">الواتس اب</span> الخاص بك.
+            <div id="dropdown-menu" class="dropdown-menu">
+                <li onclick="linkTypeWhatsApp()"><a>واتس اب</a></li>
+                <li onclick="linkTypeShort()"><a>مختصر</a></li>
+            
+            </div>`
+
+
+        var formWhatsApp_EN = `<div  class="email-sending">
+                        <select name="" id="">
+                            <option value="" selected>Send Link To</option>
+                            <option value="">Don't Send</option>
+                        </select>
+                        <!-- -------------------------- Email Field --------------------------- -->
+                        <input id="email" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="phoneNumber ">
+                        <h6>+966</h6>
+                        <!-- -------------------------- Phone Number Field --------------------------- -->
+                        <input id="phone_number" type="number" min="0" placeholder="Phone">
+                        <div id="info-number">
+                            <svg viewBox="0 0 111.577 111.577">
+                                <g>
+                                    <path fill=#b2b2b2
+                                        d="M78.962,99.536l-1.559,6.373c-4.677,1.846-8.413,3.251-11.195,4.217c-2.785,0.969-6.021,1.451-9.708,1.451
+                                   c-5.662,0-10.066-1.387-13.207-4.142c-3.141-2.766-4.712-6.271-4.712-10.523c0-1.646,0.114-3.339,0.351-5.064
+                                   c0.239-1.727,0.619-3.672,1.139-5.846l5.845-20.688c0.52-1.981,0.962-3.858,1.316-5.633c0.359-1.764,0.532-3.387,0.532-4.848
+                                   c0-2.642-0.547-4.49-1.636-5.529c-1.089-1.036-3.167-1.562-6.252-1.562c-1.511,0-3.064,0.242-4.647,0.71
+                                   c-1.59,0.47-2.949,0.924-4.09,1.346l1.563-6.378c3.829-1.559,7.489-2.894,10.99-4.002c3.501-1.111,6.809-1.667,9.938-1.667
+                                   c5.623,0,9.962,1.359,13.009,4.077c3.047,2.72,4.57,6.246,4.57,10.591c0,0.899-0.1,2.483-0.315,4.747
+                                   c-0.21,2.269-0.601,4.348-1.171,6.239l-5.82,20.605c-0.477,1.655-0.906,3.547-1.279,5.676c-0.385,2.115-0.569,3.731-0.569,4.815
+                                   c0,2.736,0.61,4.604,1.833,5.597c1.232,0.993,3.354,1.487,6.368,1.487c1.415,0,3.025-0.251,4.814-0.744
+                                   C76.854,100.348,78.155,99.915,78.962,99.536z M80.438,13.03c0,3.59-1.353,6.656-4.072,9.177c-2.712,2.53-5.98,3.796-9.803,3.796
+                                   c-3.835,0-7.111-1.266-9.854-3.796c-2.738-2.522-4.11-5.587-4.11-9.177c0-3.583,1.372-6.654,4.11-9.207
+                                   C59.447,1.274,62.729,0,66.563,0c3.822,0,7.091,1.277,9.803,3.823C79.087,6.376,80.438,9.448,80.438,13.03z" />
+                                </g>
+
+                            </svg>
+
+                        </div>
+
+
+                    </div>
+                    <div class="send-text">
+                        <div>
+                            <h6>B</h6>
+                            <h6>I</h6>
+                            <h6>S</h6>
+                        </div>
+                        <!-- -------------------------- TextArea Field --------------------------- -->
+                        <textarea onkeyup="showTextOnPhone()" name="" id="textArea"
+                            placeholder="Your message here"></textarea>
+                    </div>
+
+
+                    <div class="btns ">
+                        <h6 id="btn-moreOptions" href="" onclick="showModel()">More Options</h6>
+                        <div id="modelBack" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  ">
+                                <div class="modelheader">
+                                    <h1>Options</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
+                                </div>
+                                <h1>Custom Link</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+                                    <!-- -------------------------- Custom Link Field --------------------------- -->
+                                    <input id="phone_number" type="text">
+                                </div>
+                                <h4>Use "_" or "-" instead of a space</h4>
+                                <div class="saveChangesContainer">
+                                    <h6>SAVE CHANGES</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll" href="#" onclick="conformReset()">RESET ALL</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3>Do you want to clear all data?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="resetFields()">Yes</button> <button class="no"
+                                    onclick="dontResetFields()">No</button>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink" href="" onclick="conformGenerate()">GENERATE LINK</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3>Link will be generated, do you want to continue?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="generateLink()">Yes</button> <button class="no"
+                                    onclick="dontGenerateLink()">No</button>
+                            </div>
+                        </div>
+                    </div>`
+
+
+        var formWhatsApp_AR = `<div  class="email-sending-AR">
+                        <!-- -------------------------- Email Field --------------------------- -->
+                        <input id="email" type="email" placeholder="الايميل" style='direction: rtl;'>
+                        
+                        <select name="" id="">
+                            <option value="" selected>ارسال الرابط الى</option>
+                            <option value="">عدم ارسال الرابط</option>
+                        </select>
+                        
+                    </div>
+
+                    <div class="phoneNumber ">
+                        <h6>+966</h6>
+                        <!-- -------------------------- Phone Number Field --------------------------- -->
+                        <input id="phone_number" type="number" min="0" placeholder="رقم الهاتف">
+                        <div id="info-number">
+                            <svg viewBox="0 0 111.577 111.577">
+                                <g>
+                                    <path fill=#b2b2b2
+                                        d="M78.962,99.536l-1.559,6.373c-4.677,1.846-8.413,3.251-11.195,4.217c-2.785,0.969-6.021,1.451-9.708,1.451
+                                   c-5.662,0-10.066-1.387-13.207-4.142c-3.141-2.766-4.712-6.271-4.712-10.523c0-1.646,0.114-3.339,0.351-5.064
+                                   c0.239-1.727,0.619-3.672,1.139-5.846l5.845-20.688c0.52-1.981,0.962-3.858,1.316-5.633c0.359-1.764,0.532-3.387,0.532-4.848
+                                   c0-2.642-0.547-4.49-1.636-5.529c-1.089-1.036-3.167-1.562-6.252-1.562c-1.511,0-3.064,0.242-4.647,0.71
+                                   c-1.59,0.47-2.949,0.924-4.09,1.346l1.563-6.378c3.829-1.559,7.489-2.894,10.99-4.002c3.501-1.111,6.809-1.667,9.938-1.667
+                                   c5.623,0,9.962,1.359,13.009,4.077c3.047,2.72,4.57,6.246,4.57,10.591c0,0.899-0.1,2.483-0.315,4.747
+                                   c-0.21,2.269-0.601,4.348-1.171,6.239l-5.82,20.605c-0.477,1.655-0.906,3.547-1.279,5.676c-0.385,2.115-0.569,3.731-0.569,4.815
+                                   c0,2.736,0.61,4.604,1.833,5.597c1.232,0.993,3.354,1.487,6.368,1.487c1.415,0,3.025-0.251,4.814-0.744
+                                   C76.854,100.348,78.155,99.915,78.962,99.536z M80.438,13.03c0,3.59-1.353,6.656-4.072,9.177c-2.712,2.53-5.98,3.796-9.803,3.796
+                                   c-3.835,0-7.111-1.266-9.854-3.796c-2.738-2.522-4.11-5.587-4.11-9.177c0-3.583,1.372-6.654,4.11-9.207
+                                   C59.447,1.274,62.729,0,66.563,0c3.822,0,7.091,1.277,9.803,3.823C79.087,6.376,80.438,9.448,80.438,13.03z" />
+                                </g>
+
+                            </svg>
+
+                        </div>
+
+
+                    </div>
+                    <div class="send-text">
+                        <div>
+                            <h6>B</h6>
+                            <h6>I</h6>
+                            <h6>S</h6>
+                        </div>
+                        <!-- -------------------------- TextArea Field --------------------------- -->
+                        <textarea onkeyup="showTextOnPhone()" name="" id="textArea"
+                            placeholder="اكتب رسالتك هنا" style='direction: rtl;'></textarea>
+                    </div>
+
+
+                    <div class="btns btns-AR ">
+                        <h6 id="btn-moreOptions" href="" onclick="showModel()">خيارات اكثر</h6>
+                        <div id="modelBack" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer modelContainer-AR  ">
+                                <div class="modelheader modelheader-AR">
+                                    <h1>خيارات</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
+                                </div>
+                                <h1 >رابط خاص</h1>
+
+                                <div class="customLink ">
+                                    <h6>http://WebDomain.com/</h6>
+                                    <!-- -------------------------- Custom Link Field --------------------------- -->
+                                    <input  type="text">
+                                </div>
+                                <h4>استخدم "-" او "_" بدلا من المسافة</h4>
+                                <div class="saveChangesContainer saveChangesContainer-AR">
+                                    <h6>حفظ التغييرات</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll" href="#" onclick="conformReset()">مسح الكل</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3>هل تود مسح جميع البيانات</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="resetFields()">نعم</button> <button class="no"
+                                    onclick="dontResetFields()">لا</button>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink" href="" onclick="conformGenerate()">انشاء الرابط</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3>سوف يتم انشاء الرابط هل تود الاستمرار؟</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="generateLink()">نعم</button> <button class="no"
+                                    onclick="dontGenerateLink()">لا</button>
+                            </div>
+                        </div>
+                    </div>`
+
+
+
+        var shortForm_EN = `
+
+                        <div class="email-sending">
+                        <select name="" id="">
+                            <option value="" selected>Send Link To</option>
+                            <option value="">Don't Send</option>
+                        </select>
+                        <!-- -------------------------- Email Field --------------------------- -->
+                        <input id="email2" type="email" placeholder="Email">
+                    </div>
+
+                    <div class="url-input">
+
+                        <!-- -------------------------- URL Field --------------------------- -->
+                        <input id="url-Input" type="text" min="0" placeholder="Enter your URL Here ...">
+
+                    </div>
+
+
+                    <div class="btns">
+                        <h6 id="btn-moreOptions2" href="" onclick="showModel2()">More Options</h6>
+                        <div id="modelBack2" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  ">
+                                <div class="modelheader">
+                                    <h1>Options</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn2()">&times;</span>
+                                </div>
+                                <h1>Custom Link</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+                                    <!-- -------------------------- Custom Link Field --------------------------- -->
+                                    <input id="phone_number" type="text">
+                                </div>
+                                <h4>Use "_" or "-" instead of a space</h4>
+                                <div class="saveChangesContainer">
+                                    <h6>SAVE CHANGES</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll2" href="#" onclick="conformReset2()">RESET ALL</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3>Do you want to clear all data?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="resetFields2()">Yes</button> <button class="no"
+                                    onclick="dontResetFields2()">No</button>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">GENERATE LINK</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3>Link will be generated, do you want to continue?</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="generateLink2()">Yes</button> <button class="no"
+                                    onclick="dontGenerateLink2()">No</button>
+                            </div>
+                        </div>
+                    </div>`
+
+        var shortForm_AR = `
+
+                        <div class="email-sending email-sending-AR"> 
+                        <!-- -------------------------- Email Field --------------------------- -->
+                        <input id="email2" type="email" placeholder="الايميل" style='direction: rtl;'>
+                        <select name="" id="">
+                            <option value="" selected>ارسال الى</option>
+                            <option value="">عدم الارسال</option>
+                        </select>
+                       
+                    </div>
+
+                    <div class="url-input">
+
+                        <!-- -------------------------- URL Field --------------------------- -->
+                        <input id="url-Input" type="text" min="0" placeholder="ادخل الرابط الخاص بك" style='direction: rtl;'>
+
+                    </div>
+
+
+                    <div class="btns btns-AR">
+                        <h6 id="btn-moreOptions2" href="" onclick="showModel2()">خيارات اكثر</h6>
+                        <div id="modelBack2" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  modelContainer-AR">
+                                <div class="modelheader modelheader-AR">
+                                    <h1>خيارات</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn2()">&times;</span>
+                                </div>
+                                <h1 style='direction: rtl;'>رابط خاص</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+                                    <!-- -------------------------- Custom Link Field --------------------------- -->
+                                    <input id="phone_number" type="text">
+                                </div>
+                                <h4>استخدم "-" او "_" بدلا من المسافة</h4>
+                                <div class="saveChangesContainer saveChangesContainer-AR">
+                                    <h6>حفظ التغييرات</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll2" href="#" onclick="conformReset2()">مسح الكل</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3>هل تود مسح جميع البيانات؟</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="resetFields2()">نعم</button> <button class="no"
+                                    onclick="dontResetFields2()">لا</button>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">انشاء الرابط</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3>سوف يتم انشاء الرابط .. هل تود الاستمرار؟</h3>
+                            <div class="yes_no">
+                                <button class="yes" onclick="generateLink2()">نعم</button> <button class="no"
+                                    onclick="dontGenerateLink2()">لا</button>
+                            </div>
+                        </div>
+                    </div>`
+
+
+    </script>
+
+</body>
+
+</html>
