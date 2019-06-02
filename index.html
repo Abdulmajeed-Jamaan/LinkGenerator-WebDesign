@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@4"></script>
@@ -24,14 +24,7 @@
         <!-- ----------------------------------------------------------------- -->
         <section class="left_side ">
             <div>
-                <h1 id="title">Let's create <span>your own</span>
-
-                    <br>
-                    <span id="linkType" class="whatsApp" onclick="linkTypes()">WhatsApp</span> link.
-                    <div id="dropdown-menu" class="dropdown-menu">
-                        <li onclick="linkTypeWhatsApp()"><a>WhatsApp</a></li>
-                        <li onclick="linkTypeShort()"><a>Short</a></li>
-                    </div>
+                <h1 id="title">
                 </h1>
 
                 <!-- ----------------------------------------------------------------- -->
@@ -156,7 +149,10 @@
 
     <script>
 
-        languageAR = true;
+        languageAR = false;
+
+
+
         window.onload = function () {
             toggleLanguage();
         };
@@ -191,7 +187,6 @@
 
 
         window.addEventListener('click', outSidemodel);
-
         function showModel2() {
             var modelBack2 = document.getElementById("modelBack2");
 
@@ -293,16 +288,14 @@
 
             if (!generateConformShown) {
 
-                if (window.innerWidth <= 450) {
-
-
-
-                } else {
+                if (!window.innerWidth <= 450) {
 
                     generateConform[0].style.top = rect.top - 110 + "px";
-                    generateConform[0].style.left = rect.left - 150 + "px";
+                    generateConform[0].style.left = rect.left + "px";
 
                 }
+
+
 
                 generateConform[0].style.display = 'block';
                 generateConformShown = true;
@@ -418,15 +411,11 @@
 
             if (!generateConformShown2) {
 
-                if (window.innerWidth <= 450) {
+                if (!window.innerWidth <= 450) {
 
-
-
-                } else {
 
                     generateConform[1].style.top = rect.top - 110 + "px";
-                    generateConform[1].style.left = rect.left - 150 + "px";
-
+                    generateConform[1].style.left = rect.left + "px";
                 }
 
                 generateConform[1].style.display = 'block';
@@ -501,17 +490,72 @@
 
         }
 
-        function showTextOnPhone() {
+
+        //-----------------------------------------------------------------------------
+        //------------------------------- show Text on --------------------------------
+        //-----------------------------------------------------------------------------
+
+        var TAGS = [["*", "b"], ["_", "i"], ["~", "s"], ["```", "code"]];
+        var selectionStart = -1, selectionEnd = -1;
+
+        function whatsappTextSelected() {
             var textarea = document.getElementById("textArea");
 
-            if (textarea.value.length <= 2) {
-                senderViewText.innerHTML = 'show text here';
-                resieverViewText.innerHTML = 'show text here';
-                return;
-            }
-            senderViewText.innerHTML = textarea.value;
-            resieverViewText.innerHTML = textarea.value;
+            selectionStart = textarea.selectionStart;
+            selectionEnd = textarea.selectionEnd;
+            update()
         }
+        function format(t) {
+            var textarea = document.getElementById("textArea");
+
+            var e = TAGS[t][0]
+                , n = textarea.value;
+            n = n.substring(0, selectionStart) + e + n.substring(selectionStart, selectionEnd) + e + n.substring(selectionEnd);
+            textarea.value = n;
+            selectionStart = selectionEnd = -1;
+            update()
+        }
+        function update() {
+            var textarea = document.getElementById("textArea");
+
+            selectionStart = textarea.selectionStart;
+            selectionEnd = textarea.selectionEnd;
+
+            var t = selectionStart === selectionEnd ? true : false;
+
+            var e = textarea.value.replace(/&/g, "&").replace(/>/g, ">").replace(/</g, "&lt;").replace(/\n/g, "<br />");
+            for (var n = 0; n < TAGS.length; n++) {
+                var o = e.indexOf(TAGS[n][0])
+                    , a = e.indexOf(TAGS[n][0], o + 1);
+                while (o > -1 && a > -1) {
+                    e = e.substring(0, o) + "<" + TAGS[n][1] + ">" + e.substring(o + TAGS[n][0].length, a) + "</" + TAGS[n][1] + ">" + e.substring(a + TAGS[n][0].length);
+                    o = e.indexOf(TAGS[n][0], a + 1);
+                    a = e.indexOf(TAGS[n][0], o + 1)
+                }
+            }
+            senderViewText.innerHTML = e.length > 0 ? e : '<font >عرض النص هنا</font>'
+            resieverViewText.innerHTML = e.length > 0 ? e : '<font >عرض النص هنا</font>'
+        }
+
+        function showMobileNumber() {
+
+            var mobileField = document.getElementById("phone_numberfield");
+            var phoneInput = document.getElementById("phone_number");
+
+            if (phoneInput.value.length <= 1) {
+
+                mobileField.innerHTML = "+96655...";
+            } else {
+
+                mobileField.innerHTML = "+966" + phoneInput.value;
+
+            }
+
+
+        }
+
+
+
         //-----------------------------------------------------------------------------
 
 
@@ -593,7 +637,6 @@
         //-----------------------------------------------------------------------------
 
 
-        var languageAR = false;
         var langBtn = document.getElementById("lang");
         langBtn.addEventListener('click', toggleLanguage);
 
@@ -604,6 +647,11 @@
 
         var whatsForm = document.getElementById("whatsApp-form");
         var shortForm = document.getElementById("short-form");
+
+
+        var showRightMessage = document.getElementById("right_message_text");
+
+        var showLeftMessage = document.getElementById("left_message_text");
 
 
 
@@ -621,7 +669,9 @@
 
                 shortForm.innerHTML = shortForm_AR;
 
+                showRightMessage.style.textAlign = 'right';
 
+                showLeftMessage.style.textAlign = 'right';
 
                 languageAR = true;
             } else {
@@ -637,6 +687,9 @@
                 shortForm.innerHTML = shortForm_EN;
 
 
+                showRightMessage.style.textAlign = 'left';
+
+                showLeftMessage.style.textAlign = 'left';
 
 
 
@@ -678,7 +731,7 @@
                 });
             } else {
                 tippy('#copy_button', {
-                    content: 'تم النسخ',
+                    content: '! تم النسخ',
                     theme: 'light',
                     trigger: 'click',
                     duration: 250,
@@ -728,7 +781,7 @@
                     <div class="phoneNumber ">
                         <h6>+966</h6>
                         <!-- -------------------------- Phone Number Field --------------------------- -->
-                        <input id="phone_number" type="number" min="0" placeholder="Phone">
+                        <input id="phone_number" onkeyup="showMobileNumber()" type="number" min="0" placeholder="Phone">
                         <div id="info-number">
                             <svg viewBox="0 0 111.577 111.577">
                                 <g>
@@ -754,18 +807,18 @@
                     </div>
                     <div class="send-text">
                         <div>
-                            <h6>B</h6>
-                            <h6>I</h6>
-                            <h6>S</h6>
+                            <h6 onclick = "javascript: format(0); " >B</h6>
+                            <h6 onclick = "javascript: format(1); " >I</h6>
+                            <h6 onclick = "javascript: format(2); ">S</h6>
                         </div>
                         <!-- -------------------------- TextArea Field --------------------------- -->
-                        <textarea onkeyup="showTextOnPhone()" name="" id="textArea"
+                        <textarea  name="" id="textArea" onkeyup="update();" onmouseup="update();" onselect="whatsappTextSelected();"
                             placeholder="Your message here"></textarea>
                     </div>
 
 
                     <div class="btns ">
-                        <h6 id="btn-moreOptions" href="" onclick="showModel()">More Options</h6>
+                        <h6 id="btn-moreOptions" onclick="showModel()">More Options</h6>
                         <div id="modelBack" class="modelBack fadeIn animated faster">
                             <div class="modelContainer  ">
                                 <div class="modelheader">
@@ -777,7 +830,7 @@
                                 <div class="customLink">
                                     <h6>http://WebDomain.com/</h6>
                                     <!-- -------------------------- Custom Link Field --------------------------- -->
-                                    <input id="phone_number" type="text">
+                                    <input id="" type="text">
                                 </div>
                                 <h4>Use "_" or "-" instead of a space</h4>
                                 <div class="saveChangesContainer">
@@ -786,23 +839,24 @@
 
                             </div>
                         </div>
-                        <h6 id="btn-resetAll" href="#" onclick="conformReset()">RESET ALL</h6>
+                        <h6 id="btn-resetAll"  onclick="conformReset()">RESET ALL</h6>
                         <div class="resetAllConform fadeIn animated faster">
                             <h3>Do you want to clear all data?</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="resetFields()">Yes</button> <button class="no"
-                                    onclick="dontResetFields()">No</button>
+                                <h5 class="yes" onclick="resetFields()">Yes</h5> <h5 class="no"
+                                    onclick="dontResetFields()">No</h5>
                             </div>
                         </div>
-                        <h6 id="btn-generateLink" href="" onclick="conformGenerate()">GENERATE LINK</h6>
+                        <h6 id="btn-generateLink"  onclick="conformGenerate()">GENERATE LINK</h6>
                         <div class="generateConform fadeIn animated faster">
                             <h3>Link will be generated, do you want to continue?</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="generateLink()">Yes</button> <button class="no"
-                                    onclick="dontGenerateLink()">No</button>
+                                <h5 class="yes" onclick="generateLink()">Yes</h5> <h5 class="no"
+                                    onclick="dontGenerateLink()">No</h5>
                             </div>
                         </div>
                     </div>`
+
 
 
         var formWhatsApp_AR = `<div  class="email-sending-AR">
@@ -819,7 +873,7 @@
                     <div class="phoneNumber ">
                         <h6>+966</h6>
                         <!-- -------------------------- Phone Number Field --------------------------- -->
-                        <input id="phone_number" type="number" min="0" placeholder="رقم الهاتف">
+                        <input id="phone_number" onkeyup="showMobileNumber()" type="number" min="0" placeholder="رقم الهاتف">
                         <div id="info-number">
                             <svg viewBox="0 0 111.577 111.577">
                                 <g>
@@ -845,18 +899,18 @@
                     </div>
                     <div class="send-text">
                         <div>
-                            <h6>B</h6>
-                            <h6>I</h6>
-                            <h6>S</h6>
+                            <h6 onclick = "javascript: format(0); " >B</h6>
+                            <h6 onclick = "javascript: format(1); " >I</h6>
+                            <h6 onclick = "javascript: format(2); ">S</h6>
                         </div>
                         <!-- -------------------------- TextArea Field --------------------------- -->
-                        <textarea onkeyup="showTextOnPhone()" name="" id="textArea"
+                        <textarea name="" id="textArea" onkeyup="update();" onmouseup="update();" onselect="whatsappTextSelected();"
                             placeholder="اكتب رسالتك هنا" style='direction: rtl;'></textarea>
                     </div>
 
 
                     <div class="btns btns-AR ">
-                        <h6 id="btn-moreOptions" href="" onclick="showModel()">خيارات اكثر</h6>
+                        <h6 id="btn-moreOptions"  onclick="showModel()">خيارات اكثر</h6>
                         <div id="modelBack" class="modelBack fadeIn animated faster">
                             <div class="modelContainer modelContainer-AR  ">
                                 <div class="modelheader modelheader-AR">
@@ -877,20 +931,20 @@
 
                             </div>
                         </div>
-                        <h6 id="btn-resetAll" href="#" onclick="conformReset()">مسح الكل</h6>
+                        <h6 id="btn-resetAll"  onclick="conformReset()">مسح الكل</h6>
                         <div class="resetAllConform fadeIn animated faster">
                             <h3>هل تود مسح جميع البيانات</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="resetFields()">نعم</button> <button class="no"
-                                    onclick="dontResetFields()">لا</button>
+                                <h5 class="yes" onclick="resetFields()">نعم</h5> <h5 class="no"
+                                    onclick="dontResetFields()">لا</h5>
                             </div>
                         </div>
-                        <h6 id="btn-generateLink" href="" onclick="conformGenerate()">انشاء الرابط</h6>
+                        <h6 id="btn-generateLink" onclick="conformGenerate()">انشاء الرابط</h6>
                         <div class="generateConform fadeIn animated faster">
                             <h3>سوف يتم انشاء الرابط هل تود الاستمرار؟</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="generateLink()">نعم</button> <button class="no"
-                                    onclick="dontGenerateLink()">لا</button>
+                                <h5 class="yes" onclick="generateLink()">نعم</h5> <h5 class="no"
+                                    onclick="dontGenerateLink()">لا</h5>
                             </div>
                         </div>
                     </div>`
@@ -929,7 +983,7 @@
                                 <div class="customLink">
                                     <h6>http://WebDomain.com/</h6>
                                     <!-- -------------------------- Custom Link Field --------------------------- -->
-                                    <input id="phone_number" type="text">
+                                    <input id="" type="text">
                                 </div>
                                 <h4>Use "_" or "-" instead of a space</h4>
                                 <div class="saveChangesContainer">
@@ -942,16 +996,16 @@
                         <div class="resetAllConform fadeIn animated faster">
                             <h3>Do you want to clear all data?</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="resetFields2()">Yes</button> <button class="no"
-                                    onclick="dontResetFields2()">No</button>
+                                <h5 class="yes" onclick="resetFields2()">Yes</h5> <h5 class="no"
+                                    onclick="dontResetFields2()">No</h5>
                             </div>
                         </div>
                         <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">GENERATE LINK</h6>
                         <div class="generateConform fadeIn animated faster">
                             <h3>Link will be generated, do you want to continue?</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="generateLink2()">Yes</button> <button class="no"
-                                    onclick="dontGenerateLink2()">No</button>
+                                <h5 class="yes" onclick="generateLink2()">Yes</h5> <h5 class="no"
+                                    onclick="dontGenerateLink2()">No</h5>
                             </div>
                         </div>
                     </div>`
@@ -989,7 +1043,7 @@
                                 <div class="customLink">
                                     <h6>http://WebDomain.com/</h6>
                                     <!-- -------------------------- Custom Link Field --------------------------- -->
-                                    <input id="phone_number" type="text">
+                                    <input id="" type="text">
                                 </div>
                                 <h4>استخدم "-" او "_" بدلا من المسافة</h4>
                                 <div class="saveChangesContainer saveChangesContainer-AR">
@@ -1002,16 +1056,16 @@
                         <div class="resetAllConform fadeIn animated faster">
                             <h3>هل تود مسح جميع البيانات؟</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="resetFields2()">نعم</button> <button class="no"
-                                    onclick="dontResetFields2()">لا</button>
+                                <h5 class="yes" onclick="resetFields2()">نعم</h5> <h5 class="no"
+                                    onclick="dontResetFields2()">لا</h5>
                             </div>
                         </div>
                         <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">انشاء الرابط</h6>
                         <div class="generateConform fadeIn animated faster">
                             <h3>سوف يتم انشاء الرابط .. هل تود الاستمرار؟</h3>
                             <div class="yes_no">
-                                <button class="yes" onclick="generateLink2()">نعم</button> <button class="no"
-                                    onclick="dontGenerateLink2()">لا</button>
+                                <h5 class="yes" onclick="generateLink2()">نعم</h5> <h5 class="no"
+                                    onclick="dontGenerateLink2()">لا</h5>
                             </div>
                         </div>
                     </div>`
