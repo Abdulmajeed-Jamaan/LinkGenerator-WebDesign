@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Segoe UI';
+	font-family: 'Cairo', sans-serif;
 }
 
 .container {
@@ -123,6 +123,7 @@ body {
 	font-size: 14px;
 	border-right: 2px solid rgba(151, 151, 151, 0.123);
 	border-left: 2px solid rgba(151, 151, 151, 0.123);
+	color: gray;
 }
 ::placeholder {
 	color: rgba(128, 128, 128, 0.692);
@@ -134,6 +135,7 @@ body {
 	padding: 12px 12px;
 	font-size: 14px;
 	font-family: inherit;
+	min-width: 0;
 }
 
 /*
@@ -146,29 +148,30 @@ body {
 
 .phoneNumber {
 	width: 100%;
-	display: grid;
-	grid-template-columns: 50px auto 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: 2px solid rgba(151, 151, 151, 0.123);
 	border-radius: 3px;
 	margin-bottom: 15px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
 }
 
 .phoneNumber h6 {
 	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-weight: 400;
+	font-weight: bold;
+	color: gray;
 }
 
-.phoneNumber #info-number {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.phoneNumber input {
+	flex: 1;
 }
 
 .phoneNumber #info-number svg {
 	width: 18px;
+	margin-right: 5px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -239,6 +242,7 @@ input[type=number]::-webkit-outer-spin-button {
 .btns {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-flow: wrap;
 	transition: all 0.5s;
 }
@@ -265,6 +269,12 @@ input[type=number]::-webkit-outer-spin-button {
 .btns #btn-resetAll2 {
 	margin-left: auto;
 	margin-right: 10px;
+}
+
+.btns-AR #btn-resetAll,
+.btns-AR #btn-resetAll2 {
+	margin-left: 10px;
+	margin-right: auto;
 }
 
 .btns #btn-resetAll:hover,
@@ -331,6 +341,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background-color: #39065a;
 	color: white;
 	font-weight: 400;
+	border-radius: 3px;
 }
 
 .btns #btn-generateLink:hover,
@@ -361,7 +372,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .modelContainer {
 	max-width: 600px;
-	min-width: 285px;
 
 	margin: 50px auto 0 auto;
 	background-color: white;
@@ -545,7 +555,12 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-bottom: 30px;
 	display: flex;
 	justify-content: center;
+	padding: 0 15px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
 }
+
 .preview h1 {
 	border: 3px solid white;
 	text-align: center;
@@ -566,7 +581,7 @@ input[type=number]::-webkit-outer-spin-button {
 	border: 3px solid white;
 	text-align: center;
 	display: inline-block;
-	margin: 0 auto;
+	margin: 0 0 0 auto;
 	color: white;
 	font-size: 18px;
 	padding: 10px 15px;
@@ -616,8 +631,8 @@ input[type=number]::-webkit-outer-spin-button {
 -------------------------------------------------------------------------------
  */
 .phone {
-	height: 700px;
-	width: 330px;
+	height: 620px;
+	width: 300px;
 	margin: auto;
 	background-image: url("../img/phone.png");
 	background-size: cover;
@@ -629,7 +644,7 @@ input[type=number]::-webkit-outer-spin-button {
 	background-color: #005e54;
 	height: 55px;
 	max-width: 310px;
-	margin: 78px 10px 0 18px;
+	margin: 70px 13px 0 16px;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
@@ -642,7 +657,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .header h1 {
 	color: white;
-	font-size: 18px;
+	font-size: 16px;
 	margin-left: 5px;
 	max-width: 10px;
 }
@@ -655,16 +670,26 @@ input[type=number]::-webkit-outer-spin-button {
 .messages {
 	background-image: url("../img/whatsapp_back.jpg");
 	background-size: cover;
-	height: 480px;
-	margin: 0px 11px 0 19px;
+	height: 420px;
+	margin: 0px 13px 0 16px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.messages::-webkit-scrollbar {
+	width: 4px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+	background-color: rgba(128, 128, 128, 0.527);
 }
 
 .right_message {
 	width: 100%;
 	display: flex;
 	flex-direction: row-reverse;
-	transition: all 0.5s;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .right_message .container_right {
@@ -694,9 +719,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 .left_message {
 	width: 100%;
-	display: flex;
 	flex-direction: row;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	display: none;
 }
 
@@ -727,6 +752,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .left_message p,
 .right_message p {
+	font-size: 14px;
 	margin: 0;
 }
 
@@ -750,7 +776,6 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 	box-sizing: border-box; /* Opera/IE 8+ */
-	min-width: 300px;
 }
 
 .resultPage .mainContainer {
@@ -825,7 +850,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 30px 0;
 }
 
-.resultTypes artical {
+.resultTypes > div {
 	padding: 5px;
 	border: 2px solid rgba(128, 128, 128, 0.452);
 	border-radius: 3px;
@@ -835,7 +860,7 @@ input[type=number]::-webkit-outer-spin-button {
 	transition: 0.5s;
 }
 
-.resultTypes artical:hover {
+.resultTypes > div:hover {
 	border: 2px solid #39065a;
 }
 
@@ -845,7 +870,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 15px 30px;
 }
 
-.resultTypes artical h4 {
+.resultTypes > div h4 {
 	text-align: center;
 	font-weight: normal;
 	font-size: 14px;
@@ -891,5 +916,19 @@ input[type=number]::-webkit-outer-spin-button {
 	.resetAllConform h5,
 	.generateConform h5 {
 		width: 100px;
+	}
+
+	.left_side input[type=number] {
+		padding: 12px 5px;
+	}
+
+	.btns #btn-resetAll,
+	.btns #btn-resetAll2 {
+		margin-right: 0;
+	}
+
+	.btns-AR #btn-resetAll,
+	.btns-AR #btn-resetAll2 {
+		margin-left: 0;
 	}
 }
