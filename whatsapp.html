@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
+
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/popper.js@1"></script>
     <script src="https://unpkg.com/tippy.js@4"></script>
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css" />
     <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+
 
 </head>
 
@@ -20,29 +27,383 @@
 
     <main id="mainContainer" class="container">
 
+        <!-- ____________________________________________________________________ -->
+        <!-- _______________________Input Section________________________________ -->
+        <!-- ____________________________________________________________________ -->
 
         <section class="left_side ">
             <div>
-                <h1 id="title"></h1>
+                <h1 id="title" data-language="title">
+                    Let's create <strong>your own</strong>
+
+                    <br>
+                    <span id="linkType" class="whatsApp" onclick="linkTypes()">WhatsApp</span>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <ul>
+                            <li data-language="sub-title-short"><a href="short.html">Short</a></li>
+                        </ul>
+                    </div>
+                    link.
+                </h1>
 
 
+                <!-- ___________________________Form Whats App___________________________ -->
                 <form id="whatsApp-form" action="/someWhere" class="fadeIn animated faster">
+                    <div class="email-sending">
 
+                        <!-- ___________________________Send Options___________________________ -->
+                        <select name="sendOptions">
+                            <option value="" selected data-language="email-option-send">Send Link To</option>
+                            <option value="" data-language="email-option-not-send">Don't Send</option>
+                        </select>
+
+                        <!-- ___________________________Email Input___________________________ -->
+                        <input id="email" type="email" placeholder="Email" data-language="email-input">
+                    </div>
+
+                    <div class="phoneNumber ">
+
+                        <!-- ___________________________Country Key Options___________________________ -->
+                        <select name="countryKey" id="countryKey">
+                            <option value=+1>+1</option>
+                            <option value=+7>+7</option>
+                            <option value=+20>+20</option>
+                            <option value=+27>+27</option>
+                            <option value=+30>+30</option>
+                            <option value=+31>+31</option>
+                            <option value=+32>+32</option>
+                            <option value=+33>+33</option>
+                            <option value=+34>+34</option>
+                            <option value=+36>+36</option>
+                            <option value=+39>+39</option>
+                            <option value=+40>+40</option>
+                            <option value=+41>+41</option>
+                            <option value=+43>+43</option>
+                            <option value=+44>+44</option>
+                            <option value=+45>+45</option>
+                            <option value=+46>+46</option>
+                            <option value=+47>+47</option>
+                            <option value=+48>+48</option>
+                            <option value=+49>+49</option>
+                            <option value=+51>+51</option>
+                            <option value=+52>+52</option>
+                            <option value=+53>+53</option>
+                            <option value=+54>+54</option>
+                            <option value=+55>+55</option>
+                            <option value=+56>+56</option>
+                            <option value=+57>+57</option>
+                            <option value=+58>+58</option>
+                            <option value=+60>+60</option>
+                            <option value=+61>+61</option>
+                            <option value=+62>+62</option>
+                            <option value=+63>+63</option>
+                            <option value=+64>+64</option>
+                            <option value=+65>+65</option>
+                            <option value=+66>+66</option>
+                            <option value=+81>+81</option>
+                            <option value=+82>+82</option>
+                            <option value=+84>+84</option>
+                            <option value=+86>+86</option>
+                            <option value=+90>+90</option>
+                            <option value=+91>+91</option>
+                            <option value=+92>+92</option>
+                            <option value=+93>+93</option>
+                            <option value=+94>+94</option>
+                            <option value=+95>+95</option>
+                            <option value=+98>+98</option>
+                            <option value=+211>+211</option>
+                            <option value=+212>+212</option>
+                            <option value=+213>+213</option>
+                            <option value=+216>+216</option>
+                            <option value=+218>+218</option>
+                            <option value=+220>+220</option>
+                            <option value=+221>+221</option>
+                            <option value=+222>+222</option>
+                            <option value=+223>+223</option>
+                            <option value=+224>+224</option>
+                            <option value=+225>+225</option>
+                            <option value=+226>+226</option>
+                            <option value=+227>+227</option>
+                            <option value=+228>+228</option>
+                            <option value=+229>+229</option>
+                            <option value=+230>+230</option>
+                            <option value=+231>+231</option>
+                            <option value=+232>+232</option>
+                            <option value=+233>+233</option>
+                            <option value=+234>+234</option>
+                            <option value=+235>+235</option>
+                            <option value=+236>+236</option>
+                            <option value=+237>+237</option>
+                            <option value=+238>+238</option>
+                            <option value=+239>+239</option>
+                            <option value=+240>+240</option>
+                            <option value=+241>+241</option>
+                            <option value=+242>+242</option>
+                            <option value=+243>+243</option>
+                            <option value=+244>+244</option>
+                            <option value=+245>+245</option>
+                            <option value=+246>+246</option>
+                            <option value=+248>+248</option>
+                            <option value=+249>+249</option>
+                            <option value=+250>+250</option>
+                            <option value=+251>+251</option>
+                            <option value=+252>+252</option>
+                            <option value=+253>+253</option>
+                            <option value=+254>+254</option>
+                            <option value=+255>+255</option>
+                            <option value=+256>+256</option>
+                            <option value=+257>+257</option>
+                            <option value=+258>+258</option>
+                            <option value=+260>+260</option>
+                            <option value=+261>+261</option>
+                            <option value=+262>+262</option>
+                            <option value=+263>+263</option>
+                            <option value=+264>+264</option>
+                            <option value=+265>+265</option>
+                            <option value=+266>+266</option>
+                            <option value=+267>+267</option>
+                            <option value=+268>+268</option>
+                            <option value=+269>+269</option>
+                            <option value=+290>+290</option>
+                            <option value=+291>+291</option>
+                            <option value=+297>+297</option>
+                            <option value=+298>+298</option>
+                            <option value=+299>+299</option>
+                            <option value=+350>+350</option>
+                            <option value=+351>+351</option>
+                            <option value=+352>+352</option>
+                            <option value=+353>+353</option>
+                            <option value=+354>+354</option>
+                            <option value=+355>+355</option>
+                            <option value=+356>+356</option>
+                            <option value=+357>+357</option>
+                            <option value=+358>+358</option>
+                            <option value=+359>+359</option>
+                            <option value=+370>+370</option>
+                            <option value=+371>+371</option>
+                            <option value=+372>+372</option>
+                            <option value=+373>+373</option>
+                            <option value=+374>+374</option>
+                            <option value=+375>+375</option>
+                            <option value=+376>+376</option>
+                            <option value=+377>+377</option>
+                            <option value=+378>+378</option>
+                            <option value=+379>+379</option>
+                            <option value=+380>+380</option>
+                            <option value=+381>+381</option>
+                            <option value=+382>+382</option>
+                            <option value=+383>+383</option>
+                            <option value=+385>+385</option>
+                            <option value=+386>+386</option>
+                            <option value=+387>+387</option>
+                            <option value=+389>+389</option>
+                            <option value=+420>+420</option>
+                            <option value=+421>+421</option>
+                            <option value=+423>+423</option>
+                            <option value=+500>+500</option>
+                            <option value=+501>+501</option>
+                            <option value=+502>+502</option>
+                            <option value=+503>+503</option>
+                            <option value=+504>+504</option>
+                            <option value=+505>+505</option>
+                            <option value=+506>+506</option>
+                            <option value=+507>+507</option>
+                            <option value=+508>+508</option>
+                            <option value=+509>+509</option>
+                            <option value=+590>+590</option>
+                            <option value=+591>+591</option>
+                            <option value=+592>+592</option>
+                            <option value=+593>+593</option>
+                            <option value=+595>+595</option>
+                            <option value=+597>+597</option>
+                            <option value=+598>+598</option>
+                            <option value=+599>+599</option>
+                            <option value=+670>+670</option>
+                            <option value=+672>+672</option>
+                            <option value=+673>+673</option>
+                            <option value=+674>+674</option>
+                            <option value=+675>+675</option>
+                            <option value=+676>+676</option>
+                            <option value=+677>+677</option>
+                            <option value=+678>+678</option>
+                            <option value=+679>+679</option>
+                            <option value=+680>+680</option>
+                            <option value=+681>+681</option>
+                            <option value=+682>+682</option>
+                            <option value=+683>+683</option>
+                            <option value=+685>+685</option>
+                            <option value=+686>+686</option>
+                            <option value=+687>+687</option>
+                            <option value=+688>+688</option>
+                            <option value=+689>+689</option>
+                            <option value=+690>+690</option>
+                            <option value=+691>+691</option>
+                            <option value=+692>+692</option>
+                            <option value=+850>+850</option>
+                            <option value=+852>+852</option>
+                            <option value=+853>+853</option>
+                            <option value=+855>+855</option>
+                            <option value=+856>+856</option>
+                            <option value=+880>+880</option>
+                            <option value=+886>+886</option>
+                            <option value=+960>+960</option>
+                            <option value=+961>+961</option>
+                            <option value=+962>+962</option>
+                            <option value=+963>+963</option>
+                            <option value=+964>+964</option>
+                            <option value=+965>+965</option>
+                            <option value=+966>+966</option>
+                            <option value=+967>+967</option>
+                            <option value=+968>+968</option>
+                            <option value=+970>+970</option>
+                            <option value=+971>+971</option>
+                            <option value=+972>+972</option>
+                            <option value=+973>+973</option>
+                            <option value=+974>+974</option>
+                            <option value=+975>+975</option>
+                            <option value=+976>+976</option>
+                            <option value=+977>+977</option>
+                            <option value=+992>+992</option>
+                            <option value=+993>+993</option>
+                            <option value=+994>+994</option>
+                            <option value=+995>+995</option>
+                            <option value=+996 selected>+996</option>
+                            <option value=+998>+998</option>
+                            <option value=+1-242>+1-242</option>
+                            <option value=+1-246>+1-246</option>
+                            <option value=+1-264>+1-264</option>
+                            <option value=+1-268>+1-268</option>
+                            <option value=+1-284>+1-284</option>
+                            <option value=+1-340>+1-340</option>
+                            <option value=+1-345>+1-345</option>
+                            <option value=+1-441>+1-441</option>
+                            <option value=+1-473>+1-473</option>
+                            <option value=+1-649>+1-649</option>
+                            <option value=+1-664>+1-664</option>
+                            <option value=+1-670>+1-670</option>
+                            <option value=+1-671>+1-671</option>
+                            <option value=+1-684>+1-684</option>
+                            <option value=+1-721>+1-721</option>
+                            <option value=+1-758>+1-758</option>
+                            <option value=+1-767>+1-767</option>
+                            <option value=+1-784>+1-784</option>
+                            <option value=+1-787>+1-787</option>
+                            <option value=+1-939>1-939</option>
+                            <option value=+1-809>+1-809</option>
+                            <option value=+1-829>+1-829</option>
+                            <option value=+1-849>+1-849</option>
+                            <option value=+1-868>+1-868</option>
+                            <option value=+1-869>+1-869</option>
+                            <option value=+1-876>+1-876</option>
+                            <option value=+44-1481>+44-1481</option>
+                            <option value=+44-1534>+44-1534</option>
+                            <option value=+44-1624>+44-1624</option>
+
+                        </select>
+
+                        <!-- ___________________________Phone Number Input___________________________ -->
+                        <input id="phone_number" onkeyup="showMobileNumber()" type="number" min="0" placeholder="Phone"
+                            data-language="phone-input">
+
+                        <div id="info-number">
+                            <svg viewBox="0 0 111.577 111.577">
+                                <g>
+                                    <path fill=#b2b2b2
+                                        d="M78.962,99.536l-1.559,6.373c-4.677,1.846-8.413,3.251-11.195,4.217c-2.785,0.969-6.021,1.451-9.708,1.451
+                                       c-5.662,0-10.066-1.387-13.207-4.142c-3.141-2.766-4.712-6.271-4.712-10.523c0-1.646,0.114-3.339,0.351-5.064
+                                       c0.239-1.727,0.619-3.672,1.139-5.846l5.845-20.688c0.52-1.981,0.962-3.858,1.316-5.633c0.359-1.764,0.532-3.387,0.532-4.848
+                                       c0-2.642-0.547-4.49-1.636-5.529c-1.089-1.036-3.167-1.562-6.252-1.562c-1.511,0-3.064,0.242-4.647,0.71
+                                       c-1.59,0.47-2.949,0.924-4.09,1.346l1.563-6.378c3.829-1.559,7.489-2.894,10.99-4.002c3.501-1.111,6.809-1.667,9.938-1.667
+                                       c5.623,0,9.962,1.359,13.009,4.077c3.047,2.72,4.57,6.246,4.57,10.591c0,0.899-0.1,2.483-0.315,4.747
+                                       c-0.21,2.269-0.601,4.348-1.171,6.239l-5.82,20.605c-0.477,1.655-0.906,3.547-1.279,5.676c-0.385,2.115-0.569,3.731-0.569,4.815
+                                       c0,2.736,0.61,4.604,1.833,5.597c1.232,0.993,3.354,1.487,6.368,1.487c1.415,0,3.025-0.251,4.814-0.744
+                                       C76.854,100.348,78.155,99.915,78.962,99.536z M80.438,13.03c0,3.59-1.353,6.656-4.072,9.177c-2.712,2.53-5.98,3.796-9.803,3.796
+                                       c-3.835,0-7.111-1.266-9.854-3.796c-2.738-2.522-4.11-5.587-4.11-9.177c0-3.583,1.372-6.654,4.11-9.207
+                                       C59.447,1.274,62.729,0,66.563,0c3.822,0,7.091,1.277,9.803,3.823C79.087,6.376,80.438,9.448,80.438,13.03z" />
+                                </g>
+
+                            </svg>
+
+                        </div>
+
+
+                    </div>
+                    <div class="send-text">
+                        <div>
+                            <h6 onclick="javascript: format(0); ">B</h6>
+                            <h6 onclick="javascript: format(1); ">I</h6>
+                            <h6 onclick="javascript: format(2); ">S</h6>
+                        </div>
+
+                        <!-- ___________________________Text Area Input___________________________ -->
+                        <textarea name="message" id="textArea" onkeyup="update();" onmouseup="update();"
+                            onselect="whatsappTextSelected();" placeholder="Your message here"
+                            data-language="textarea-input"></textarea>
+                    </div>
+
+
+                    <div class="btns ">
+                        <h6 id="btn-moreOptions" onclick="showModel()" data-language="btn-moreOptions">More Options</h6>
+                        <div id="modelBack" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  ">
+                                <div class="modelheader">
+                                    <h1 data-language="moreOptions-title">Options</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
+                                </div>
+                                <h1 data-language="moreOptions-subTitle">Custom Link</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+
+                                    <!-- ___________________________Custom Link Input___________________________ -->
+                                    <input name="customLink" type="text">
+
+                                </div>
+                                <h4 data-language="customLink-info">Use "_" or "-" instead of a space</h4>
+                                <div class="saveChangesContainer">
+                                    <h6 data-language="btn-customLink">SAVE CHANGES</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll" onclick="conformReset()" data-language="btn-resetAll">RESET ALL</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3 data-language="conform-resetAll">Do you want to clear all data?</h3>
+                            <div class="yes_no">
+                                <h5 class="yes" onclick="resetFields()" data-language="btn-yes">Yes</h5>
+                                <h5 class="no" onclick="dontResetFields()" data-language="btn-no">No</h5>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink" onclick="conformGenerate()" data-language="btn-generateLink">GENERATE
+                            LINK</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3 data-language="conform-generateLink">Link will be generated, do you want to continue?
+                            </h3>
+                            <div class="yes_no">
+
+                                <!-- ___________________________Generate Link Button___________________________ -->
+                                <h5 class="yes" onclick="generateLink()" data-language="btn-yes">Yes</h5>
+
+                                <h5 class="no" onclick="dontGenerateLink()" data-language="btn-no">No</h5>
+                            </div>
+                        </div>
+                    </div>
 
                 </form>
 
 
-                <form id="short-form" action="/someWhere" class="fadeIn animated faster">
 
-
-
-                </form>
                 <div class="mark">
-                    <h1>Powered By<a href=""> Your Company name</a></h1>
+                    <h1>Powered By<a>Takkah</a></h1>
                 </div>
             </div>
         </section>
 
+
+
+        <!-- ____________________________________________________________________ -->
+        <!-- _______________________View phone Section___________________________ -->
+        <!-- ____________________________________________________________________ -->
 
 
         <section class=" right_side">
@@ -50,16 +411,16 @@
             <div class="preview">
 
                 <div>
-                    <h1 onclick="previewTypes()">Preview</h1>
+                    <h1 onclick="previewTypes()" data-language="btn-preview">Preview</h1>
                     <div id="dropdown-menu2" class="dropdown-menu2">
                         <ul>
-                            <li onclick="viewAsSender()"><a>View as Sender</a></li>
-                            <li onclick="viewAsResiever()"><a>View as Resiever</a></li>
+                            <li onclick="viewAsSender()" data-language="sender-view">View as Sender</li>
+                            <li onclick="viewAsResiever()" data-language="reciever-view">View as Resiever</li>
                         </ul>
                     </div>
                 </div>
 
-                <h2 id="lang">AR</h2>
+                <h2 id="lang" data-calllang="ar">AR</h2>
             </div>
 
             <div class="phone">
@@ -72,8 +433,8 @@
                     <div id="right_message" class="right_message">
                         <img src="img/tail_right.png" height="30" alt="">
                         <div class="container_right">
-                            <p id="right_message_text">show text here</p><span><svg id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 15" width="16" height="15">
+                            <p id="right_message_text">Show text here</p><span><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 15" width="16" height="15">
                                     <path fill="#4FC3F7"
                                         d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z">
                                     </path>
@@ -84,7 +445,7 @@
                     <div id="left_message" class="left_message">
                         <img src="img/tail_left.png" height="30" alt="">
                         <div class="container_left">
-                            <p id="left_message_text">show text here</p>
+                            <p id="left_message_text">Show text here</p>
                             <span>3:45AM</span>
                         </div>
                     </div>
@@ -93,12 +454,21 @@
 
         </section>
 
+
+
+
+        <!-- _____________________________________________________________________ -->
+        <!-- _______________________Link Generated Section________________________ -->
+        <!-- _____________________________________________________________________ -->
+
+
+
         <section id="resultPage" class="resultPage fadeIn animated faster">
             <div class="mainContainer">
-                <h1>Site Name</h1>
+                <h1 data-language="site-name">Takkah</h1>
                 <hr>
                 <div class="subContainer">
-                    <h1>There is your Link !!</h1>
+                    <h1 data-language="result-message">There is your Link !!</h1>
                     <div class="resultLink">
                         <svg id="copy_button" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="561px" height="561px"
@@ -126,7 +496,7 @@
                         </div>
                     </div>
 
-                    <h3 id="hideSection3">Back to Generator</h3>
+                    <h3 id="hideSection3" onclick="hideSection3()" data-language="result-close">Back to Generator</h3>
 
                 </div>
 
@@ -140,1388 +510,67 @@
 
 
 
+
+    <script src="js/main.js"></script>
+    <script src="js/translate.js"></script>
     <script>
 
-        languageAR = false;
 
 
-
-        window.onload = function () {
-            toggleLanguage();
-        };
-
-
-        //-----------------------------------------------------------------------------
-        //----------------------- show (More Option)  pop up ---------------------------
-        //-----------------------------------------------------------------------------
-
-
-
-        function showModel() {
-            var modelBack = document.getElementById("modelBack");
-
-            modelBack.style.display = 'block';
-
-        }
-        function closeModelBtn() {
-            var modelBack = document.getElementById("modelBack");
-
-            modelBack.style.display = 'none';
-        }
-
-
-
-        //-----------------------------------------------------------------------------
-
-
-        //-----------------------------------------------------------------------------
-        //----------------------- show (More Option Form 2)  pop up ---------------------------
-        //-----------------------------------------------------------------------------
-
-
-        window.addEventListener('click', outSidemodel);
-        function showModel2() {
-            var modelBack2 = document.getElementById("modelBack2");
-
-            modelBack2.style.display = 'block';
-
-        }
-        function closeModelBtn2() {
-            var modelBack2 = document.getElementById("modelBack2");
-            modelBack2.style.display = 'none';
-        }
-
-        // for both form 1 listnear
-        function outSidemodel(e) {
-            var modelBack2 = document.getElementById("modelBack2");
-            var modelBack = document.getElementById("modelBack");
-
-            if (e.target == modelBack) {
-                modelBack.style.display = 'none';
-            }
-            if (e.target == modelBack2) {
-                modelBack2.style.display = 'none';
-            }
-        }
-
-        //-----------------------------------------------------------------------------
-
-
-        //-----------------------------------------------------------------------------
-        //----------------------- show (RESET) conform pop up ---------------------------
-        //-----------------------------------------------------------------------------
-
-        var resetConformShown = false;
-        function conformReset() {
-            var resetConform = document.getElementsByClassName("resetAllConform");
-            var btnReset = document.getElementById("btn-resetAll");
-            var rect = btnReset.getBoundingClientRect();
-            var rect2 = resetConform[0].getBoundingClientRect();
-
-
-            if (!resetConformShown) {
-
-
-
-                if (window.innerWidth <= 450) {
-
-
-
-                } else {
-                    resetConform[0].style.top = rect.top - 110 + "px";
-                    resetConform[0].style.left = rect.left - 100 + "px";
-                }
-                resetConform[0].style.display = 'block';
-                resetConformShown = true;
-            } else {
-                resetConform[0].style.display = 'none';
-                resetConformShown = false;
-            }
-
-
-        }
-
-        function resetFields() {
-            var textarea = document.getElementById("textArea");
-            var resetConform = document.getElementsByClassName("resetAllConform");
-            var btnReset = document.getElementById("btn-resetAll");
-            textarea.value = "";
-            update();
-
-            document.getElementById("phone_number").value = "";
-            document.getElementById("email").value = "";
-
-
-
-            resetConform[0].style.display = 'none';
-            resetConformShown = false;
-
-        }
-
-        function dontResetFields() {
-            var resetConform = document.getElementsByClassName("resetAllConform");
-            resetConform[0].style.display = 'none';
-            resetConformShown = false;
-        }
-
-        //-----------------------------------------------------------------------------
-
-
-        //-----------------------------------------------------------------------------
-        //----------------------- show (GENERATE) conform pop up ---------------------------
-        //-----------------------------------------------------------------------------
-
-        var generateConformShown = false;
-        function conformGenerate() {
-            var generateConform = document.getElementsByClassName("generateConform");
-            var btnGenerate = document.getElementById("btn-generateLink");
-            var rect = btnGenerate.getBoundingClientRect();
-            var rect2 = generateConform[0].getBoundingClientRect();
-
-
-            if (!generateConformShown) {
-
-                if (!window.innerWidth <= 450) {
-
-                    generateConform[0].style.top = rect.top - 110 + "px";
-                    generateConform[0].style.left = rect.left + "px";
-
-                }
-
-
-
-                generateConform[0].style.display = 'block';
-                generateConformShown = true;
-            } else {
-                generateConform[0].style.display = 'none';
-                generateConformShown = false;
-            }
-
-
-        }
-
-
-        document.getElementById("hideSection3").addEventListener('click', hideSection3);
-        var section3 = document.getElementById("resultPage");
-
-        function hideSection3() {
-
-            section3.style.display = 'none';
-
-        }
-        function generateLink() {
-
-            var generateConform = document.getElementsByClassName("generateConform");
-            section3.style.display = 'block';
-            generateConform[0].style.display = 'none';
-            generateConformShown = false;
-
-
-
-
-        }
-
-        function dontGenerateLink() {
-            var generateConform = document.getElementsByClassName("generateConform");
-
-            generateConform[0].style.display = 'none';
-            generateConformShown = false;
-
-        }
-        //-----------------------------------------------------------------------------
-
-
-        //-----------------------------------------------------------------------------
-        //-------------------- show (RESET Form 2) conform pop up ---------------------
-        //-----------------------------------------------------------------------------
-
-        var resetConformShown2 = false;
-        function conformReset2() {
-            var resetConform = document.getElementsByClassName("resetAllConform");
-            var btnReset2 = document.getElementById("btn-resetAll2");
-            var rect = btnReset2.getBoundingClientRect();
-            var rect2 = resetConform[1].getBoundingClientRect();
-
-
-            if (!resetConformShown2) {
-
-
-
-                if (window.innerWidth <= 450) {
-
-
-
-                } else {
-                    resetConform[1].style.top = rect.top - 110 + "px";
-                    resetConform[1].style.left = rect.left - 100 + "px";
-                }
-                resetConform[1].style.display = 'block';
-                resetConformShown2 = true;
-            } else {
-                resetConform[1].style.display = 'none';
-                resetConformShown2 = false;
-            }
-
-
-        }
-
-        function resetFields2() {
-            var textarea = document.getElementById("textArea");
-            var resetConform = document.getElementsByClassName("resetAllConform");
-            textarea.value = "";
-            update();
-
-            document.getElementById("url-Input").value = "";
-            document.getElementById("email2").value = "";
-
-
-
-            resetConform[1].style.display = 'none';
-            resetConformShown2 = false;
-
-        }
-
-        function dontResetFields2() {
-            var resetConform = document.getElementsByClassName("resetAllConform");
-            resetConform[1].style.display = 'none';
-            resetConformShown2 = false;
-        }
-
-        //-----------------------------------------------------------------------------
-
-
-        //-----------------------------------------------------------------------------
-        //------------------ show (GENERATE Form 2) conform pop up --------------------
-        //-----------------------------------------------------------------------------
-
-        var generateConformShown2 = false;
-        function conformGenerate2() {
-            var generateConform = document.getElementsByClassName("generateConform");
-            var btnGenerate2 = document.getElementById("btn-generateLink2");
-            var rect = btnGenerate2.getBoundingClientRect();
-            var rect2 = generateConform[1].getBoundingClientRect();
-
-
-            if (!generateConformShown2) {
-
-                if (!window.innerWidth <= 450) {
-
-
-                    generateConform[1].style.top = rect.top - 110 + "px";
-                    generateConform[1].style.left = rect.left + "px";
-                }
-
-                generateConform[1].style.display = 'block';
-                generateConformShown2 = true;
-            } else {
-                generateConform[1].style.display = 'none';
-                generateConformShown2 = false;
-            }
-
-
-        }
-
-
-        function generateLink2() {
-            var generateConform = document.getElementsByClassName("generateConform");
-            section3.style.display = 'block';
-            generateConform[0].style.display = 'none';
-            generateConformShown = false;
-
-        }
-
-        function dontGenerateLink2() {
-            var generateConform = document.getElementsByClassName("generateConform");
-            generateConform[1].style.display = 'none';
-            generateConformShown2 = false;
-
-        }
-        //-----------------------------------------------------------------------------
-
-
-
-        //-----------------------------------------------------------------------------
-        //--------------------------- toggle preview type ------ ----------------------
-        //-----------------------------------------------------------------------------
-        var preview = document.getElementById("dropdown-menu2");
-        var shown_preview = false;
-
-
-        var senderView = document.getElementById("right_message");
-        var resieverView = document.getElementById("left_message");
-
-        var senderViewText = document.getElementById("right_message_text");
-        var resieverViewText = document.getElementById("left_message_text");
-
-
-
-        function previewTypes() {
-
-            if (shown_preview) {
-                preview.style.display = 'none';
-                shown_preview = false;
-            } else {
-                preview.style.display = 'block';
-                shown_preview = true;
-            }
-
-        }
-
-        function viewAsSender() {
-            preview.style.display = 'none';
-
-            senderView.style.display = 'flex';
-            resieverView.style.display = 'none';
-            shown_preview = false;
-
-        }
-
-        function viewAsResiever() {
-            preview.style.display = 'none';
-
-            senderView.style.display = 'none';
-            resieverView.style.display = 'flex';
-            shown_preview = false;
-
-        }
-
-
-        //-----------------------------------------------------------------------------
-        //---------------------------- show Text on phone -----------------------------
-        //-----------------------------------------------------------------------------
-
-        var TAGS = [["*", "b"], ["_", "i"], ["~", "s"], ["```", "code"]];
-        var selectionStart = -1, selectionEnd = -1;
-
-        function whatsappTextSelected() {
-            var textarea = document.getElementById("textArea");
-
-            selectionStart = textarea.selectionStart;
-            selectionEnd = textarea.selectionEnd;
-            update()
-        }
-        function format(t) {
-            var textarea = document.getElementById("textArea");
-
-            var e = TAGS[t][0]
-                , n = textarea.value;
-            n = n.substring(0, selectionStart) + e + n.substring(selectionStart, selectionEnd) + e + n.substring(selectionEnd);
-            textarea.value = n;
-            selectionStart = selectionEnd = -1;
-            update()
-        }
-        function update() {
-            var textarea = document.getElementById("textArea");
-
-            selectionStart = textarea.selectionStart;
-            selectionEnd = textarea.selectionEnd;
-
-            var t = selectionStart === selectionEnd ? true : false;
-
-            var e = textarea.value.replace(/&/g, "&").replace(/>/g, ">").replace(/</g, "&lt;").replace(/\n/g, "<br />");
-            for (var n = 0; n < TAGS.length; n++) {
-                var o = e.indexOf(TAGS[n][0])
-                    , a = e.indexOf(TAGS[n][0], o + 1);
-                while (o > -1 && a > -1) {
-                    e = e.substring(0, o) + "<" + TAGS[n][1] + ">" + e.substring(o + TAGS[n][0].length, a) + "</" + TAGS[n][1] + ">" + e.substring(a + TAGS[n][0].length);
-                    o = e.indexOf(TAGS[n][0], a + 1);
-                    a = e.indexOf(TAGS[n][0], o + 1)
-                }
-            }
-            senderViewText.innerHTML = e.length > 0 ? e : '<font >عرض النص هنا</font>'
-            resieverViewText.innerHTML = e.length > 0 ? e : '<font >عرض النص هنا</font>'
-        }
-
-        function showMobileNumber() {
-
-            var mobileField = document.getElementById("phone_numberfield");
-            var phoneInput = document.getElementById("phone_number");
-
-            if (phoneInput.value.length <= 1) {
-
-                mobileField.innerHTML = "+96655...";
-            } else {
-
-                mobileField.innerHTML = "+966" + phoneInput.value;
+        // check the url has hash -> #  or not
+        if (window.location.hash) {
+            if (location.hash.substring(1) === "en") {
+                // remove all hash tags and reload page to default text
+                window.location.href = window.location.toString().split(/\?|#/)[0];
 
             }
+            else if (location.hash.substring(1) === "ar") {
+                whatsApp_AR_Lang();
 
-
-        }
-
-
-
-        //-----------------------------------------------------------------------------
-
-
-
-        //-----------------------------------------------------------------------------
-        //-------- show menu types and form changeing between whats and short ---------
-        //-----------------------------------------------------------------------------
-
-        var shown_menu = false;
-
-        var whatsAppForm = document.getElementById("whatsApp-form");
-        var shortForm = document.getElementById("short-form");
-
-
-        function linkTypes() {
-            var menu = document.getElementById("dropdown-menu");
-
-            if (shown_menu) {
-                menu.style.display = 'none';
-                shown_menu = false;
-            } else {
-                menu.style.display = 'block';
-                shown_menu = true;
-            }
-
-        }
-
-        function linkTypeWhatsApp() {
-            var menu = document.getElementById("dropdown-menu");
-
-            var linkType = document.getElementById("linkType");
-            menu.style.display = 'none';
-            shown_menu = false;
-
-            whatsAppForm.style.display = 'block';
-            shortForm.style.display = 'none';
-
-            if (!languageAR) {
-                linkType.innerHTML = 'WhatsApp';
-            } else {
-                linkType.innerHTML = 'الواتس اب';
-
-            }
-            linkType.style.color = '#1ebea5';
-
-
-        }
-
-        function linkTypeShort() {
-            var menu = document.getElementById("dropdown-menu");
-
-            var linkType = document.getElementById("linkType");
-
-            menu.style.display = 'none';
-            shown_menu = false;
-
-            whatsAppForm.style.display = 'none';
-            shortForm.style.display = 'block';
-
-            if (!languageAR) {
-                linkType.innerHTML = 'Short';
-            } else {
-                linkType.innerHTML = 'مختصر';
-
-            }
-            linkType.style.color = '#39065a';
-
-        }
-        //-----------------------------------------------------------------------------
-
-
-
-
-
-
-
-        //-----------------------------------------------------------------------------
-        //---------------------------- Language Transform -----------------------------
-        //-----------------------------------------------------------------------------
-
-
-        var langBtn = document.getElementById("lang");
-        langBtn.addEventListener('click', toggleLanguage);
-
-
-        var areaChange = document.getElementById("mainContainer");
-
-        var title = document.getElementById("title");
-
-        var whatsForm = document.getElementById("whatsApp-form");
-        var shortForm = document.getElementById("short-form");
-
-
-        var showRightMessage = document.getElementById("right_message_text");
-
-        var showLeftMessage = document.getElementById("left_message_text");
-
-
-
-        function toggleLanguage() {
-
-            if (!languageAR) {
-                langBtn.innerHTML = 'EN';
-                areaChange.classList.add("container-AR");
-
-
-                title.style.direction = 'rtl';
-                title.innerHTML = titleInside_AR;
-
-                whatsForm.innerHTML = formWhatsApp_AR;
-
-                shortForm.innerHTML = shortForm_AR;
-
-                showRightMessage.style.textAlign = 'right';
-
-                showLeftMessage.style.textAlign = 'right';
-
-                languageAR = true;
-            } else {
-                langBtn.innerHTML = 'AR';
-                areaChange.classList.remove("container-AR");
-
-
-                title.style.direction = 'ltr';
-                title.innerHTML = titleInside_EN;
-
-                whatsForm.innerHTML = formWhatsApp_EN;
-
-                shortForm.innerHTML = shortForm_EN;
-
-
-                showRightMessage.style.textAlign = 'left';
-
-                showLeftMessage.style.textAlign = 'left';
-
-
-
-                languageAR = false;
-
-            }
-
-
-
-
-            //-----------------------------------------------------------------------------
-            //---------------------------- tooltip for info icon --------------------------
-            //-----------------------------------------------------------------------------
-
-            if (!languageAR) {
-                tippy('#info-number', {
-                    content: 'For your information .. this phone number must have an active account on WhatsApp',
-                    theme: 'light',
-                });
-            } else {
                 tippy('#info-number', {
                     content: 'لمعلوماتك... لابد ان يكون هذا الرقم حساب فعال على الواتس',
-                    theme: 'light',
+                    theme: 'light'
                 });
-            }
-            //-----------------------------------------------------------------------------
 
-            //-----------------------------------------------------------------------------
-            //---------------------------- tooltip for Copy icon --------------------------
-            //-----------------------------------------------------------------------------
-
-            if (!languageAR) {
-                tippy('#copy_button', {
-                    content: 'Copied !',
-                    theme: 'light',
-                    trigger: 'click',
-                    duration: 250,
-
-                });
-            } else {
                 tippy('#copy_button', {
                     content: '! تم النسخ',
                     theme: 'light',
                     trigger: 'click',
-                    duration: 250,
-
+                    duration: 250
                 });
             }
+        } else {
 
+            // setting the tooltip for info icon
+            tippy('#info-number', {
+                content: 'For your information .. this phone number must have an active account on WhatsApp',
+                theme: 'light'
+            });
 
+            // setting the tooltip for copy icon
+            tippy('#copy_button', {
+                content: 'Copied !',
+                theme: 'light',
+                trigger: 'click',
+                duration: 250
+            });
 
-            //-----------------------------------------------------------------------------
 
         }
 
 
 
+        $('[data-callLang]').on('click', function () {
+            //change flag to selected language
 
-        var titleInside_EN = `Let's create <span>your own</span>
+            if ($(this).attr('data-callLang') === "en") {
+                window.location.href = window.location.toString().split(/\?|#/)[0];
+                return false;
+            }
 
-            <br>
-            <span id="linkType" class="whatsApp" onclick="linkTypes()">WhatsApp</span> link.
-            <div id="dropdown-menu" class="dropdown-menu">
-                <li onclick="linkTypeWhatsApp()"><a>WhatsApp</a></li>
-                <li onclick="linkTypeShort()"><a>Short</a></li>
-            </div>`
-
-
-        var titleInside_AR = `لنبني<span> رابط</span>
-
-            <br>
-            <span id="linkType" class="whatsApp" onclick="linkTypes()">الواتس اب</span> الخاص بك.
-            <div id="dropdown-menu" class="dropdown-menu">
-                <li onclick="linkTypeWhatsApp()"><a>واتس اب</a></li>
-                <li onclick="linkTypeShort()"><a>مختصر</a></li>
-            
-            </div>`
-
-
-        var formWhatsApp_EN = `<div  class="email-sending">
-                        <select name="" id="">
-                            <option value="" selected>Send Link To</option>
-                            <option value="">Don't Send</option>
-                        </select>
-                        <input id="email" type="email" placeholder="Email">
-                    </div>
-
-                    <div class="phoneNumber ">
-                            <select name="countryKey" id="countryKey">
-                                    <option value=+1>+1</option> 
-                                        <option value=+7>+7</option> 
-                                        <option value=+20>+20</option> 
-                                        <option value=+27>+27</option> 
-                                        <option value=+30>+30</option> 
-                                        <option value=+31>+31</option> 
-                                        <option value=+32>+32</option> 
-                                        <option value=+33>+33</option> 
-                                        <option value=+34>+34</option> 
-                                        <option value=+36>+36</option> 
-                                        <option value=+39>+39</option> 
-                                        <option value=+40>+40</option> 
-                                        <option value=+41>+41</option> 
-                                        <option value=+43>+43</option> 
-                                        <option value=+44>+44</option> 
-                                        <option value=+45>+45</option> 
-                                        <option value=+46>+46</option> 
-                                        <option value=+47>+47</option> 
-                                        <option value=+48>+48</option> 
-                                        <option value=+49>+49</option> 
-                                        <option value=+51>+51</option> 
-                                        <option value=+52>+52</option> 
-                                        <option value=+53>+53</option> 
-                                        <option value=+54>+54</option> 
-                                        <option value=+55>+55</option> 
-                                        <option value=+56>+56</option> 
-                                        <option value=+57>+57</option> 
-                                        <option value=+58>+58</option> 
-                                        <option value=+60>+60</option> 
-                                        <option value=+61>+61</option> 
-                                        <option value=+62>+62</option> 
-                                        <option value=+63>+63</option> 
-                                        <option value=+64>+64</option> 
-                                        <option value=+65>+65</option> 
-                                        <option value=+66>+66</option> 
-                                        <option value=+81>+81</option> 
-                                        <option value=+82>+82</option> 
-                                        <option value=+84>+84</option> 
-                                        <option value=+86>+86</option> 
-                                        <option value=+90>+90</option> 
-                                        <option value=+91>+91</option> 
-                                        <option value=+92>+92</option> 
-                                        <option value=+93>+93</option> 
-                                        <option value=+94>+94</option> 
-                                        <option value=+95>+95</option> 
-                                        <option value=+98>+98</option> 
-                                        <option value=+211>+211</option> 
-                                        <option value=+212>+212</option> 
-                                        <option value=+213>+213</option> 
-                                        <option value=+216>+216</option> 
-                                        <option value=+218>+218</option> 
-                                        <option value=+220>+220</option> 
-                                        <option value=+221>+221</option> 
-                                        <option value=+222>+222</option> 
-                                        <option value=+223>+223</option> 
-                                        <option value=+224>+224</option> 
-                                        <option value=+225>+225</option> 
-                                        <option value=+226>+226</option> 
-                                        <option value=+227>+227</option> 
-                                        <option value=+228>+228</option> 
-                                        <option value=+229>+229</option> 
-                                        <option value=+230>+230</option> 
-                                        <option value=+231>+231</option> 
-                                        <option value=+232>+232</option> 
-                                        <option value=+233>+233</option> 
-                                        <option value=+234>+234</option> 
-                                        <option value=+235>+235</option> 
-                                        <option value=+236>+236</option> 
-                                        <option value=+237>+237</option> 
-                                        <option value=+238>+238</option> 
-                                        <option value=+239>+239</option> 
-                                        <option value=+240>+240</option> 
-                                        <option value=+241>+241</option> 
-                                        <option value=+242>+242</option> 
-                                        <option value=+243>+243</option> 
-                                        <option value=+244>+244</option> 
-                                        <option value=+245>+245</option> 
-                                        <option value=+246>+246</option> 
-                                        <option value=+248>+248</option> 
-                                        <option value=+249>+249</option> 
-                                        <option value=+250>+250</option> 
-                                        <option value=+251>+251</option> 
-                                        <option value=+252>+252</option> 
-                                        <option value=+253>+253</option> 
-                                        <option value=+254>+254</option> 
-                                        <option value=+255>+255</option> 
-                                        <option value=+256>+256</option> 
-                                        <option value=+257>+257</option> 
-                                        <option value=+258>+258</option> 
-                                        <option value=+260>+260</option> 
-                                        <option value=+261>+261</option> 
-                                        <option value=+262>+262</option> 
-                                        <option value=+263>+263</option> 
-                                        <option value=+264>+264</option> 
-                                        <option value=+265>+265</option> 
-                                        <option value=+266>+266</option> 
-                                        <option value=+267>+267</option> 
-                                        <option value=+268>+268</option> 
-                                        <option value=+269>+269</option> 
-                                        <option value=+290>+290</option> 
-                                        <option value=+291>+291</option> 
-                                        <option value=+297>+297</option> 
-                                        <option value=+298>+298</option> 
-                                        <option value=+299>+299</option> 
-                                        <option value=+350>+350</option> 
-                                        <option value=+351>+351</option> 
-                                        <option value=+352>+352</option> 
-                                        <option value=+353>+353</option> 
-                                        <option value=+354>+354</option> 
-                                        <option value=+355>+355</option> 
-                                        <option value=+356>+356</option> 
-                                        <option value=+357>+357</option> 
-                                        <option value=+358>+358</option> 
-                                        <option value=+359>+359</option> 
-                                        <option value=+370>+370</option> 
-                                        <option value=+371>+371</option> 
-                                        <option value=+372>+372</option> 
-                                        <option value=+373>+373</option> 
-                                        <option value=+374>+374</option> 
-                                        <option value=+375>+375</option> 
-                                        <option value=+376>+376</option> 
-                                        <option value=+377>+377</option> 
-                                        <option value=+378>+378</option> 
-                                        <option value=+379>+379</option> 
-                                        <option value=+380>+380</option> 
-                                        <option value=+381>+381</option> 
-                                        <option value=+382>+382</option> 
-                                        <option value=+383>+383</option> 
-                                        <option value=+385>+385</option> 
-                                        <option value=+386>+386</option> 
-                                        <option value=+387>+387</option> 
-                                        <option value=+389>+389</option> 
-                                        <option value=+420>+420</option> 
-                                        <option value=+421>+421</option> 
-                                        <option value=+423>+423</option> 
-                                        <option value=+500>+500</option> 
-                                        <option value=+501>+501</option> 
-                                        <option value=+502>+502</option> 
-                                        <option value=+503>+503</option> 
-                                        <option value=+504>+504</option> 
-                                        <option value=+505>+505</option> 
-                                        <option value=+506>+506</option> 
-                                        <option value=+507>+507</option> 
-                                        <option value=+508>+508</option> 
-                                        <option value=+509>+509</option> 
-                                        <option value=+590>+590</option> 
-                                        <option value=+591>+591</option> 
-                                        <option value=+592>+592</option> 
-                                        <option value=+593>+593</option> 
-                                        <option value=+595>+595</option> 
-                                        <option value=+597>+597</option> 
-                                        <option value=+598>+598</option> 
-                                        <option value=+599>+599</option> 
-                                        <option value=+670>+670</option> 
-                                        <option value=+672>+672</option> 
-                                        <option value=+673>+673</option> 
-                                        <option value=+674>+674</option> 
-                                        <option value=+675>+675</option> 
-                                        <option value=+676>+676</option> 
-                                        <option value=+677>+677</option> 
-                                        <option value=+678>+678</option> 
-                                        <option value=+679>+679</option> 
-                                        <option value=+680>+680</option> 
-                                        <option value=+681>+681</option> 
-                                        <option value=+682>+682</option> 
-                                        <option value=+683>+683</option> 
-                                        <option value=+685>+685</option> 
-                                        <option value=+686>+686</option> 
-                                        <option value=+687>+687</option> 
-                                        <option value=+688>+688</option> 
-                                        <option value=+689>+689</option> 
-                                        <option value=+690>+690</option> 
-                                        <option value=+691>+691</option> 
-                                        <option value=+692>+692</option> 
-                                        <option value=+850>+850</option> 
-                                        <option value=+852>+852</option> 
-                                        <option value=+853>+853</option> 
-                                        <option value=+855>+855</option> 
-                                        <option value=+856>+856</option> 
-                                        <option value=+880>+880</option> 
-                                        <option value=+886>+886</option> 
-                                        <option value=+960>+960</option> 
-                                        <option value=+961>+961</option> 
-                                        <option value=+962>+962</option> 
-                                        <option value=+963>+963</option> 
-                                        <option value=+964>+964</option> 
-                                        <option value=+965>+965</option> 
-                                        <option value=+966>+966</option> 
-                                        <option value=+967>+967</option> 
-                                        <option value=+968>+968</option> 
-                                        <option value=+970>+970</option> 
-                                        <option value=+971>+971</option> 
-                                        <option value=+972>+972</option> 
-                                        <option value=+973>+973</option> 
-                                        <option value=+974>+974</option> 
-                                        <option value=+975>+975</option> 
-                                        <option value=+976>+976</option> 
-                                        <option value=+977>+977</option> 
-                                        <option value=+992>+992</option> 
-                                        <option value=+993>+993</option> 
-                                        <option value=+994>+994</option> 
-                                        <option value=+995>+995</option> 
-                                        <option value=+996 selected>+996</option> 
-                                        <option value=+998>+998</option> 
-                                        <option value=+1-242>+1-242</option> 
-                                        <option value=+1-246>+1-246</option> 
-                                        <option value=+1-264>+1-264</option> 
-                                        <option value=+1-268>+1-268</option> 
-                                        <option value=+1-284>+1-284</option> 
-                                        <option value=+1-340>+1-340</option> 
-                                        <option value=+1-345>+1-345</option> 
-                                        <option value=+1-441>+1-441</option> 
-                                        <option value=+1-473>+1-473</option> 
-                                        <option value=+1-649>+1-649</option> 
-                                        <option value=+1-664>+1-664</option> 
-                                        <option value=+1-670>+1-670</option> 
-                                        <option value=+1-671>+1-671</option> 
-                                        <option value=+1-684>+1-684</option> 
-                                        <option value=+1-721>+1-721</option> 
-                                        <option value=+1-758>+1-758</option> 
-                                        <option value=+1-767>+1-767</option> 
-                                        <option value=+1-784>+1-784</option> 
-                                        <option value=+1-787>+1-787</option> 
-                                        <option value=+1-939>1-939</option> 
-                                        <option value=+1-809>+1-809</option> 
-                                        <option value=+1-829>+1-829</option> 
-                                        <option value=+1-849>+1-849</option> 
-                                        <option value=+1-868>+1-868</option> 
-                                        <option value=+1-869>+1-869</option> 
-                                        <option value=+1-876>+1-876</option> 
-                                        <option value=+44-1481>+44-1481</option> 
-                                        <option value=+44-1534>+44-1534</option> 
-                                        <option value=+44-1624>+44-1624</option>
-
-                                </select>     
-                        <input id="phone_number" onkeyup="showMobileNumber()" type="number" min="0" placeholder="Phone">
-                        <div id="info-number">
-                            <svg viewBox="0 0 111.577 111.577">
-                                <g>
-                                    <path fill=#b2b2b2
-                                        d="M78.962,99.536l-1.559,6.373c-4.677,1.846-8.413,3.251-11.195,4.217c-2.785,0.969-6.021,1.451-9.708,1.451
-                                   c-5.662,0-10.066-1.387-13.207-4.142c-3.141-2.766-4.712-6.271-4.712-10.523c0-1.646,0.114-3.339,0.351-5.064
-                                   c0.239-1.727,0.619-3.672,1.139-5.846l5.845-20.688c0.52-1.981,0.962-3.858,1.316-5.633c0.359-1.764,0.532-3.387,0.532-4.848
-                                   c0-2.642-0.547-4.49-1.636-5.529c-1.089-1.036-3.167-1.562-6.252-1.562c-1.511,0-3.064,0.242-4.647,0.71
-                                   c-1.59,0.47-2.949,0.924-4.09,1.346l1.563-6.378c3.829-1.559,7.489-2.894,10.99-4.002c3.501-1.111,6.809-1.667,9.938-1.667
-                                   c5.623,0,9.962,1.359,13.009,4.077c3.047,2.72,4.57,6.246,4.57,10.591c0,0.899-0.1,2.483-0.315,4.747
-                                   c-0.21,2.269-0.601,4.348-1.171,6.239l-5.82,20.605c-0.477,1.655-0.906,3.547-1.279,5.676c-0.385,2.115-0.569,3.731-0.569,4.815
-                                   c0,2.736,0.61,4.604,1.833,5.597c1.232,0.993,3.354,1.487,6.368,1.487c1.415,0,3.025-0.251,4.814-0.744
-                                   C76.854,100.348,78.155,99.915,78.962,99.536z M80.438,13.03c0,3.59-1.353,6.656-4.072,9.177c-2.712,2.53-5.98,3.796-9.803,3.796
-                                   c-3.835,0-7.111-1.266-9.854-3.796c-2.738-2.522-4.11-5.587-4.11-9.177c0-3.583,1.372-6.654,4.11-9.207
-                                   C59.447,1.274,62.729,0,66.563,0c3.822,0,7.091,1.277,9.803,3.823C79.087,6.376,80.438,9.448,80.438,13.03z" />
-                                </g>
-
-                            </svg>
-
-                        </div>
-
-
-                    </div>
-                    <div class="send-text">
-                        <div>
-                            <h6 onclick = "javascript: format(0); " >B</h6>
-                            <h6 onclick = "javascript: format(1); " >I</h6>
-                            <h6 onclick = "javascript: format(2); ">S</h6>
-                        </div>
-                        <textarea  name="" id="textArea" onkeyup="update();" onmouseup="update();" onselect="whatsappTextSelected();"
-                            placeholder="Your message here"></textarea>
-                    </div>
-
-
-                    <div class="btns ">
-                        <h6 id="btn-moreOptions" onclick="showModel()">More Options</h6>
-                        <div id="modelBack" class="modelBack fadeIn animated faster">
-                            <div class="modelContainer  ">
-                                <div class="modelheader">
-                                    <h1>Options</h1>
-                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
-                                </div>
-                                <h1>Custom Link</h1>
-
-                                <div class="customLink">
-                                    <h6>http://WebDomain.com/</h6>
-                                    <input id="" type="text">
-                                </div>
-                                <h4>Use "_" or "-" instead of a space</h4>
-                                <div class="saveChangesContainer">
-                                    <h6>SAVE CHANGES</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <h6 id="btn-resetAll"  onclick="conformReset()">RESET ALL</h6>
-                        <div class="resetAllConform fadeIn animated faster">
-                            <h3>Do you want to clear all data?</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="resetFields()">Yes</h5> <h5 class="no"
-                                    onclick="dontResetFields()">No</h5>
-                            </div>
-                        </div>
-                        <h6 id="btn-generateLink"  onclick="conformGenerate()">GENERATE LINK</h6>
-                        <div class="generateConform fadeIn animated faster">
-                            <h3>Link will be generated, do you want to continue?</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="generateLink()">Yes</h5> <h5 class="no"
-                                    onclick="dontGenerateLink()">No</h5>
-                            </div>
-                        </div>
-                    </div>`
-
-
-
-        var formWhatsApp_AR = `<div  class="email-sending-AR">
-                        <input id="email" type="email" placeholder="الايميل" style='direction: rtl;'>
-                        
-                        <select name="" id="">
-                            <option value="" selected>ارسال الرابط الى</option>
-                            <option value="">عدم ارسال الرابط</option>
-                        </select>
-                        
-                    </div>
-
-                    <div class="phoneNumber ">
-                            <select name="countryKey" id="countryKey">
-                                    <option value=+1>+1</option> 
-                                        <option value=+7>+7</option> 
-                                        <option value=+20>+20</option> 
-                                        <option value=+27>+27</option> 
-                                        <option value=+30>+30</option> 
-                                        <option value=+31>+31</option> 
-                                        <option value=+32>+32</option> 
-                                        <option value=+33>+33</option> 
-                                        <option value=+34>+34</option> 
-                                        <option value=+36>+36</option> 
-                                        <option value=+39>+39</option> 
-                                        <option value=+40>+40</option> 
-                                        <option value=+41>+41</option> 
-                                        <option value=+43>+43</option> 
-                                        <option value=+44>+44</option> 
-                                        <option value=+45>+45</option> 
-                                        <option value=+46>+46</option> 
-                                        <option value=+47>+47</option> 
-                                        <option value=+48>+48</option> 
-                                        <option value=+49>+49</option> 
-                                        <option value=+51>+51</option> 
-                                        <option value=+52>+52</option> 
-                                        <option value=+53>+53</option> 
-                                        <option value=+54>+54</option> 
-                                        <option value=+55>+55</option> 
-                                        <option value=+56>+56</option> 
-                                        <option value=+57>+57</option> 
-                                        <option value=+58>+58</option> 
-                                        <option value=+60>+60</option> 
-                                        <option value=+61>+61</option> 
-                                        <option value=+62>+62</option> 
-                                        <option value=+63>+63</option> 
-                                        <option value=+64>+64</option> 
-                                        <option value=+65>+65</option> 
-                                        <option value=+66>+66</option> 
-                                        <option value=+81>+81</option> 
-                                        <option value=+82>+82</option> 
-                                        <option value=+84>+84</option> 
-                                        <option value=+86>+86</option> 
-                                        <option value=+90>+90</option> 
-                                        <option value=+91>+91</option> 
-                                        <option value=+92>+92</option> 
-                                        <option value=+93>+93</option> 
-                                        <option value=+94>+94</option> 
-                                        <option value=+95>+95</option> 
-                                        <option value=+98>+98</option> 
-                                        <option value=+211>+211</option> 
-                                        <option value=+212>+212</option> 
-                                        <option value=+213>+213</option> 
-                                        <option value=+216>+216</option> 
-                                        <option value=+218>+218</option> 
-                                        <option value=+220>+220</option> 
-                                        <option value=+221>+221</option> 
-                                        <option value=+222>+222</option> 
-                                        <option value=+223>+223</option> 
-                                        <option value=+224>+224</option> 
-                                        <option value=+225>+225</option> 
-                                        <option value=+226>+226</option> 
-                                        <option value=+227>+227</option> 
-                                        <option value=+228>+228</option> 
-                                        <option value=+229>+229</option> 
-                                        <option value=+230>+230</option> 
-                                        <option value=+231>+231</option> 
-                                        <option value=+232>+232</option> 
-                                        <option value=+233>+233</option> 
-                                        <option value=+234>+234</option> 
-                                        <option value=+235>+235</option> 
-                                        <option value=+236>+236</option> 
-                                        <option value=+237>+237</option> 
-                                        <option value=+238>+238</option> 
-                                        <option value=+239>+239</option> 
-                                        <option value=+240>+240</option> 
-                                        <option value=+241>+241</option> 
-                                        <option value=+242>+242</option> 
-                                        <option value=+243>+243</option> 
-                                        <option value=+244>+244</option> 
-                                        <option value=+245>+245</option> 
-                                        <option value=+246>+246</option> 
-                                        <option value=+248>+248</option> 
-                                        <option value=+249>+249</option> 
-                                        <option value=+250>+250</option> 
-                                        <option value=+251>+251</option> 
-                                        <option value=+252>+252</option> 
-                                        <option value=+253>+253</option> 
-                                        <option value=+254>+254</option> 
-                                        <option value=+255>+255</option> 
-                                        <option value=+256>+256</option> 
-                                        <option value=+257>+257</option> 
-                                        <option value=+258>+258</option> 
-                                        <option value=+260>+260</option> 
-                                        <option value=+261>+261</option> 
-                                        <option value=+262>+262</option> 
-                                        <option value=+263>+263</option> 
-                                        <option value=+264>+264</option> 
-                                        <option value=+265>+265</option> 
-                                        <option value=+266>+266</option> 
-                                        <option value=+267>+267</option> 
-                                        <option value=+268>+268</option> 
-                                        <option value=+269>+269</option> 
-                                        <option value=+290>+290</option> 
-                                        <option value=+291>+291</option> 
-                                        <option value=+297>+297</option> 
-                                        <option value=+298>+298</option> 
-                                        <option value=+299>+299</option> 
-                                        <option value=+350>+350</option> 
-                                        <option value=+351>+351</option> 
-                                        <option value=+352>+352</option> 
-                                        <option value=+353>+353</option> 
-                                        <option value=+354>+354</option> 
-                                        <option value=+355>+355</option> 
-                                        <option value=+356>+356</option> 
-                                        <option value=+357>+357</option> 
-                                        <option value=+358>+358</option> 
-                                        <option value=+359>+359</option> 
-                                        <option value=+370>+370</option> 
-                                        <option value=+371>+371</option> 
-                                        <option value=+372>+372</option> 
-                                        <option value=+373>+373</option> 
-                                        <option value=+374>+374</option> 
-                                        <option value=+375>+375</option> 
-                                        <option value=+376>+376</option> 
-                                        <option value=+377>+377</option> 
-                                        <option value=+378>+378</option> 
-                                        <option value=+379>+379</option> 
-                                        <option value=+380>+380</option> 
-                                        <option value=+381>+381</option> 
-                                        <option value=+382>+382</option> 
-                                        <option value=+383>+383</option> 
-                                        <option value=+385>+385</option> 
-                                        <option value=+386>+386</option> 
-                                        <option value=+387>+387</option> 
-                                        <option value=+389>+389</option> 
-                                        <option value=+420>+420</option> 
-                                        <option value=+421>+421</option> 
-                                        <option value=+423>+423</option> 
-                                        <option value=+500>+500</option> 
-                                        <option value=+501>+501</option> 
-                                        <option value=+502>+502</option> 
-                                        <option value=+503>+503</option> 
-                                        <option value=+504>+504</option> 
-                                        <option value=+505>+505</option> 
-                                        <option value=+506>+506</option> 
-                                        <option value=+507>+507</option> 
-                                        <option value=+508>+508</option> 
-                                        <option value=+509>+509</option> 
-                                        <option value=+590>+590</option> 
-                                        <option value=+591>+591</option> 
-                                        <option value=+592>+592</option> 
-                                        <option value=+593>+593</option> 
-                                        <option value=+595>+595</option> 
-                                        <option value=+597>+597</option> 
-                                        <option value=+598>+598</option> 
-                                        <option value=+599>+599</option> 
-                                        <option value=+670>+670</option> 
-                                        <option value=+672>+672</option> 
-                                        <option value=+673>+673</option> 
-                                        <option value=+674>+674</option> 
-                                        <option value=+675>+675</option> 
-                                        <option value=+676>+676</option> 
-                                        <option value=+677>+677</option> 
-                                        <option value=+678>+678</option> 
-                                        <option value=+679>+679</option> 
-                                        <option value=+680>+680</option> 
-                                        <option value=+681>+681</option> 
-                                        <option value=+682>+682</option> 
-                                        <option value=+683>+683</option> 
-                                        <option value=+685>+685</option> 
-                                        <option value=+686>+686</option> 
-                                        <option value=+687>+687</option> 
-                                        <option value=+688>+688</option> 
-                                        <option value=+689>+689</option> 
-                                        <option value=+690>+690</option> 
-                                        <option value=+691>+691</option> 
-                                        <option value=+692>+692</option> 
-                                        <option value=+850>+850</option> 
-                                        <option value=+852>+852</option> 
-                                        <option value=+853>+853</option> 
-                                        <option value=+855>+855</option> 
-                                        <option value=+856>+856</option> 
-                                        <option value=+880>+880</option> 
-                                        <option value=+886>+886</option> 
-                                        <option value=+960>+960</option> 
-                                        <option value=+961>+961</option> 
-                                        <option value=+962>+962</option> 
-                                        <option value=+963>+963</option> 
-                                        <option value=+964>+964</option> 
-                                        <option value=+965>+965</option> 
-                                        <option value=+966>+966</option> 
-                                        <option value=+967>+967</option> 
-                                        <option value=+968>+968</option> 
-                                        <option value=+970>+970</option> 
-                                        <option value=+971>+971</option> 
-                                        <option value=+972>+972</option> 
-                                        <option value=+973>+973</option> 
-                                        <option value=+974>+974</option> 
-                                        <option value=+975>+975</option> 
-                                        <option value=+976>+976</option> 
-                                        <option value=+977>+977</option> 
-                                        <option value=+992>+992</option> 
-                                        <option value=+993>+993</option> 
-                                        <option value=+994>+994</option> 
-                                        <option value=+995>+995</option> 
-                                        <option value=+996 selected>+996</option> 
-                                        <option value=+998>+998</option> 
-                                        <option value=+1-242>+1-242</option> 
-                                        <option value=+1-246>+1-246</option> 
-                                        <option value=+1-264>+1-264</option> 
-                                        <option value=+1-268>+1-268</option> 
-                                        <option value=+1-284>+1-284</option> 
-                                        <option value=+1-340>+1-340</option> 
-                                        <option value=+1-345>+1-345</option> 
-                                        <option value=+1-441>+1-441</option> 
-                                        <option value=+1-473>+1-473</option> 
-                                        <option value=+1-649>+1-649</option> 
-                                        <option value=+1-664>+1-664</option> 
-                                        <option value=+1-670>+1-670</option> 
-                                        <option value=+1-671>+1-671</option> 
-                                        <option value=+1-684>+1-684</option> 
-                                        <option value=+1-721>+1-721</option> 
-                                        <option value=+1-758>+1-758</option> 
-                                        <option value=+1-767>+1-767</option> 
-                                        <option value=+1-784>+1-784</option> 
-                                        <option value=+1-787>+1-787</option> 
-                                        <option value=+1-939>1-939</option> 
-                                        <option value=+1-809>+1-809</option> 
-                                        <option value=+1-829>+1-829</option> 
-                                        <option value=+1-849>+1-849</option> 
-                                        <option value=+1-868>+1-868</option> 
-                                        <option value=+1-869>+1-869</option> 
-                                        <option value=+1-876>+1-876</option> 
-                                        <option value=+44-1481>+44-1481</option> 
-                                        <option value=+44-1534>+44-1534</option> 
-                                        <option value=+44-1624>+44-1624</option>
-
-                                </select>                 
-                                       <input id="phone_number" onkeyup="showMobileNumber()" type="number" min="0" placeholder="رقم الهاتف">
-                        <div id="info-number">
-                            <svg viewBox="0 0 111.577 111.577">
-                                <g>
-                                    <path fill=#b2b2b2
-                                        d="M78.962,99.536l-1.559,6.373c-4.677,1.846-8.413,3.251-11.195,4.217c-2.785,0.969-6.021,1.451-9.708,1.451
-                                   c-5.662,0-10.066-1.387-13.207-4.142c-3.141-2.766-4.712-6.271-4.712-10.523c0-1.646,0.114-3.339,0.351-5.064
-                                   c0.239-1.727,0.619-3.672,1.139-5.846l5.845-20.688c0.52-1.981,0.962-3.858,1.316-5.633c0.359-1.764,0.532-3.387,0.532-4.848
-                                   c0-2.642-0.547-4.49-1.636-5.529c-1.089-1.036-3.167-1.562-6.252-1.562c-1.511,0-3.064,0.242-4.647,0.71
-                                   c-1.59,0.47-2.949,0.924-4.09,1.346l1.563-6.378c3.829-1.559,7.489-2.894,10.99-4.002c3.501-1.111,6.809-1.667,9.938-1.667
-                                   c5.623,0,9.962,1.359,13.009,4.077c3.047,2.72,4.57,6.246,4.57,10.591c0,0.899-0.1,2.483-0.315,4.747
-                                   c-0.21,2.269-0.601,4.348-1.171,6.239l-5.82,20.605c-0.477,1.655-0.906,3.547-1.279,5.676c-0.385,2.115-0.569,3.731-0.569,4.815
-                                   c0,2.736,0.61,4.604,1.833,5.597c1.232,0.993,3.354,1.487,6.368,1.487c1.415,0,3.025-0.251,4.814-0.744
-                                   C76.854,100.348,78.155,99.915,78.962,99.536z M80.438,13.03c0,3.59-1.353,6.656-4.072,9.177c-2.712,2.53-5.98,3.796-9.803,3.796
-                                   c-3.835,0-7.111-1.266-9.854-3.796c-2.738-2.522-4.11-5.587-4.11-9.177c0-3.583,1.372-6.654,4.11-9.207
-                                   C59.447,1.274,62.729,0,66.563,0c3.822,0,7.091,1.277,9.803,3.823C79.087,6.376,80.438,9.448,80.438,13.03z" />
-                                </g>
-
-                            </svg>
-
-                        </div>
-
-
-                    </div>
-                    <div class="send-text">
-                        <div>
-                            <h6 onclick = "javascript: format(0); " >B</h6>
-                            <h6 onclick = "javascript: format(1); " >I</h6>
-                            <h6 onclick = "javascript: format(2); ">S</h6>
-                        </div>
-                        <textarea name="" id="textArea" onkeyup="update();" onmouseup="update();" onselect="whatsappTextSelected();"
-                            placeholder="اكتب رسالتك هنا" style='direction: rtl;'></textarea>
-                    </div>
-
-
-                    <div class="btns btns-AR ">
-                        <h6 id="btn-moreOptions"  onclick="showModel()">خيارات اكثر</h6>
-                        <div id="modelBack" class="modelBack fadeIn animated faster">
-                            <div class="modelContainer modelContainer-AR  ">
-                                <div class="modelheader modelheader-AR">
-                                    <h1>خيارات</h1>
-                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
-                                </div>
-                                <h1 >رابط خاص</h1>
-
-                                <div class="customLink ">
-                                    <h6>http://WebDomain.com/</h6>
-                                    <input  type="text">
-                                </div>
-                                <h4>استخدم "-" او "_" بدلا من المسافة</h4>
-                                <div class="saveChangesContainer saveChangesContainer-AR">
-                                    <h6>حفظ التغييرات</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <h6 id="btn-resetAll"  onclick="conformReset()">مسح الكل</h6>
-                        <div class="resetAllConform fadeIn animated faster">
-                            <h3>هل تود مسح جميع البيانات</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="resetFields()">نعم</h5> <h5 class="no"
-                                    onclick="dontResetFields()">لا</h5>
-                            </div>
-                        </div>
-                        <h6 id="btn-generateLink" onclick="conformGenerate()">انشاء الرابط</h6>
-                        <div class="generateConform fadeIn animated faster">
-                            <h3>سوف يتم انشاء الرابط هل تود الاستمرار؟</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="generateLink()">نعم</h5> <h5 class="no"
-                                    onclick="dontGenerateLink()">لا</h5>
-                            </div>
-                        </div>
-                    </div>`
-
-
-
-        var shortForm_EN = `
-
-                        <div class="email-sending">
-                        <select name="" id="">
-                            <option value="" selected>Send Link To</option>
-                            <option value="">Don't Send</option>
-                        </select>
-                        <input id="email2" type="email" placeholder="Email">
-                    </div>
-
-                    <div class="url-input">
-
-                        <input id="url-Input" type="text" min="0" placeholder="Enter your URL Here ...">
-
-                    </div>
-
-
-                    <div class="btns">
-                        <h6 id="btn-moreOptions2" href="" onclick="showModel2()">More Options</h6>
-                        <div id="modelBack2" class="modelBack fadeIn animated faster">
-                            <div class="modelContainer  ">
-                                <div class="modelheader">
-                                    <h1>Options</h1>
-                                    <span class="closeBtn" onclick="closeModelBtn2()">&times;</span>
-                                </div>
-                                <h1>Custom Link</h1>
-
-                                <div class="customLink">
-                                    <h6>http://WebDomain.com/</h6>
-                                    <input id="" type="text">
-                                </div>
-                                <h4>Use "_" or "-" instead of a space</h4>
-                                <div class="saveChangesContainer">
-                                    <h6>SAVE CHANGES</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <h6 id="btn-resetAll2" href="#" onclick="conformReset2()">RESET ALL</h6>
-                        <div class="resetAllConform fadeIn animated faster">
-                            <h3>Do you want to clear all data?</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="resetFields2()">Yes</h5> <h5 class="no"
-                                    onclick="dontResetFields2()">No</h5>
-                            </div>
-                        </div>
-                        <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">GENERATE LINK</h6>
-                        <div class="generateConform fadeIn animated faster">
-                            <h3>Link will be generated, do you want to continue?</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="generateLink2()">Yes</h5> <h5 class="no"
-                                    onclick="dontGenerateLink2()">No</h5>
-                            </div>
-                        </div>
-                    </div>`
-
-        var shortForm_AR = `
-
-                        <div class="email-sending email-sending-AR"> 
-                        <input id="email2" type="email" placeholder="الايميل" style='direction: rtl;'>
-                        <select name="" id="">
-                            <option value="" selected>ارسال الى</option>
-                            <option value="">عدم الارسال</option>
-                        </select>
-                       
-                    </div>
-
-                    <div class="url-input">
-
-                        <input id="url-Input" type="text" min="0" placeholder="ادخل الرابط الخاص بك" style='direction: rtl;'>
-
-                    </div>
-
-
-                    <div class="btns btns-AR">
-                        <h6 id="btn-moreOptions2" href="" onclick="showModel2()">خيارات اكثر</h6>
-                        <div id="modelBack2" class="modelBack fadeIn animated faster">
-                            <div class="modelContainer  modelContainer-AR">
-                                <div class="modelheader modelheader-AR">
-                                    <h1>خيارات</h1>
-                                    <span class="closeBtn" onclick="closeModelBtn2()">&times;</span>
-                                </div>
-                                <h1 style='direction: rtl;'>رابط خاص</h1>
-
-                                <div class="customLink">
-                                    <h6>http://WebDomain.com/</h6>
-                                    <input id="" type="text">
-                                </div>
-                                <h4>استخدم "-" او "_" بدلا من المسافة</h4>
-                                <div class="saveChangesContainer saveChangesContainer-AR">
-                                    <h6>حفظ التغييرات</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <h6 id="btn-resetAll2" href="#" onclick="conformReset2()">مسح الكل</h6>
-                        <div class="resetAllConform fadeIn animated faster">
-                            <h3>هل تود مسح جميع البيانات؟</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="resetFields2()">نعم</h5> <h5 class="no"
-                                    onclick="dontResetFields2()">لا</h5>
-                            </div>
-                        </div>
-                        <h6 id="btn-generateLink2" href="" onclick="conformGenerate2()">انشاء الرابط</h6>
-                        <div class="generateConform fadeIn animated faster">
-                            <h3>سوف يتم انشاء الرابط .. هل تود الاستمرار؟</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="generateLink2()">نعم</h5> <h5 class="no"
-                                    onclick="dontGenerateLink2()">لا</h5>
-                            </div>
-                        </div>
-                    </div>`
-
-
+            window.location.hash = $(this).attr('data-callLang')
+            location.reload(true);
+        });
     </script>
 
 </body>

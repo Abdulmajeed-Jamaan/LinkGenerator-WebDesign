@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@4/themes/light.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+
+
+</head>
+
+<body>
+
+    <main id="mainContainer" class="container">
+
+        <!-- ____________________________________________________________________ -->
+        <!-- _______________________Input Section________________________________ -->
+        <!-- ____________________________________________________________________ -->
+
+        <section class="left_side ">
+            <div>
+                <h1 id="title" data-language="title">
+                    Let's create <strong>your own</strong>
+
+                    <br>
+                    <span id="linkType" class="whatsApp" onclick="linkTypes()" style="color:#39065a;">Short</span>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <ul>
+                            <li data-language="sub-title-short"><a href="whatsapp.html">WhatsApp</a></li>
+                        </ul>
+                    </div>
+                    link.
+                </h1>
+
+                <!-- ___________________________Form Short___________________________ -->
+
+                <form id="whatsApp-form" action="/someWhere" class="fadeIn animated faster">
+
+                    <!-- __________________________Send Options___________________________ -->
+                    <div class="email-sending">
+                        <select name="sendOptions">
+                            <option value="" selected data-language="email-option-send">Send Link To</option>
+                            <option value="" data-language="email-option-not-send">Don't Send</option>
+                        </select>
+
+                        <!-- __________________________Email to send___________________________ -->
+                        <input id="email" type="email" placeholder="Email" data-language="email-input">
+                    </div>
+
+
+                    <div class="url-input">
+
+                        <!-- __________________________URL input___________________________ -->
+                        <input id="url-input" type="text" data-language="url-input" placeholder="Enter URL">
+
+                    </div>
+
+                    <div class="btns ">
+                        <h6 id="btn-moreOptions" onclick="showModel()" data-language="btn-moreOptions">More Options</h6>
+                        <div id="modelBack" class="modelBack fadeIn animated faster">
+                            <div class="modelContainer  ">
+                                <div class="modelheader">
+                                    <h1 data-language="moreOptions-title">Options</h1>
+                                    <span class="closeBtn" onclick="closeModelBtn()">&times;</span>
+                                </div>
+                                <h1 data-language="moreOptions-subTitle">Custom Link</h1>
+
+                                <div class="customLink">
+                                    <h6>http://WebDomain.com/</h6>
+
+                                    <!-- __________________________Custom Link___________________________ -->
+                                    <input name="customLink" type="text">
+                                </div>
+                                <h4 data-language="customLink-info">Use "_" or "-" instead of a space</h4>
+                                <div class="saveChangesContainer">
+                                    <h6 data-language="btn-customLink">SAVE CHANGES</h6>
+                                </div>
+
+                            </div>
+                        </div>
+                        <h6 id="btn-resetAll" onclick="conformReset()" data-language="btn-resetAll">RESET ALL</h6>
+                        <div class="resetAllConform fadeIn animated faster">
+                            <h3 data-language="conform-resetAll">Do you want to clear all data?</h3>
+                            <div class="yes_no">
+                                <h5 class="yes" onclick="resetFields2()" data-language="btn-yes">Yes</h5>
+                                <h5 class="no" onclick="dontResetFields2()" data-language="btn-no">No</h5>
+                            </div>
+                        </div>
+                        <h6 id="btn-generateLink" onclick="conformGenerate()" data-language="btn-generateLink">GENERATE
+                            LINK</h6>
+                        <div class="generateConform fadeIn animated faster">
+                            <h3 data-language="conform-generateLink">Link will be generated, do you want to continue?
+                            </h3>
+                            <div class="yes_no">
+                                <h5 class="yes" onclick="generateLink()" data-language="btn-yes">Yes</h5>
+                                <h5 class="no" onclick="dontGenerateLink()" data-language="btn-no">No</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+
+                <div class="mark">
+                    <h1>Powered By<a href=""> Your Company name</a></h1>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ____________________________________________________________________ -->
+        <!-- _______________________View phone Section___________________________ -->
+        <!-- ____________________________________________________________________ -->
+
+
+        <section class=" right_side">
+
+            <div class="preview">
+
+                <div>
+                    <h1 onclick="previewTypes()" data-language="btn-preview">Preview</h1>
+                    <div id="dropdown-menu2" class="dropdown-menu2">
+                        <ul>
+                            <li onclick="viewAsSender()" data-language="sender-view">View as Sender</li>
+                            <li onclick="viewAsResiever()" data-language="reciever-view">View as Resiever</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 id="lang" data-calllang="ar">AR</h2>
+            </div>
+
+            <div class="phone">
+                <div class="header">
+                    <img id="person" src="img/person.png" alt="">
+                    <h1 id="phone_numberfield">+966551245093</h1>
+                    <img id="icons" src="img/icons.png" alt="">
+                </div>
+                <div class="messages">
+                    <div id="right_message" class="right_message">
+                        <img src="img/tail_right.png" height="30" alt="">
+                        <div class="container_right">
+                            <p id="right_message_text">Show text here</p><span><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 16 15" width="16" height="15">
+                                    <path fill="#4FC3F7"
+                                        d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z">
+                                    </path>
+                                </svg> 3:45AM</span>
+                        </div>
+                    </div>
+
+                    <div id="left_message" class="left_message">
+                        <img src="img/tail_left.png" height="30" alt="">
+                        <div class="container_left">
+                            <p id="left_message_text">Show text here</p>
+                            <span>3:45AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- _____________________________________________________________________ -->
+        <!-- _______________________Link Generated Section________________________ -->
+        <!-- _____________________________________________________________________ -->
+
+
+
+        <section id="resultPage" class="resultPage fadeIn animated faster">
+            <div class="mainContainer">
+                <h1 data-language="site-name">Takkah</h1>
+                <hr>
+                <div class="subContainer">
+                    <h1 data-language="result-message">There is your Link !!</h1>
+                    <div class="resultLink">
+                        <svg id="copy_button" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="561px" height="561px"
+                            viewBox="0 0 561 561" style="enable-background:new 0 0 561 561;" xml:space="preserve">
+                            <g>
+                                <g id="content-copy">
+                                    <path d="M395.25,0h-306c-28.05,0-51,22.95-51,51v357h51V51h306V0z M471.75,102h-280.5c-28.05,0-51,22.95-51,51v357
+                                   c0,28.05,22.95,51,51,51h280.5c28.05,0,51-22.95,51-51V153C522.75,124.95,499.8,102,471.75,102z M471.75,510h-280.5V153h280.5V510
+                                   z" />
+                                </g>
+                            </g>
+                        </svg>
+                        <h6>https://YourDomain .com/ascwr54</h6>
+                    </div>
+
+                    <div class="resultTypes">
+                        <div><img src="img/link-logo.png" alt="">
+                            <h4>LINK</h4>
+                        </div>
+                        <div><img src="img/barcode-logo.png" alt="">
+                            <h4>QRCODE</h4>
+                        </div>
+                        <div><img src="img/html-logo.png" alt="">
+                            <h4>HTML</h4>
+                        </div>
+                    </div>
+
+                    <h3 id="hideSection3" onclick="hideSection3()" data-language="result-close">Back to Generator</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/translate.js"></script>
+    <script>
+
+
+
+
+        if (window.location.hash) {
+            if (location.hash.substring(1) === "en") {
+                // remove all hash tags and reload page to default text
+                window.location.href = window.location.toString().split(/\?|#/)[0];
+
+            }
+            else if (location.hash.substring(1) === "ar") {
+                short_AR_Lang();
+
+                tippy('#info-number', {
+                    content: 'لمعلوماتك... لابد ان يكون هذا الرقم حساب فعال على الواتس',
+                    theme: 'light'
+                });
+
+                tippy('#copy_button', {
+                    content: '! تم النسخ',
+                    theme: 'light',
+                    trigger: 'click',
+                    duration: 250
+                });
+            }
+        } else {
+
+            tippy('#info-number', {
+                content: 'For your information .. this phone number must have an active account on WhatsApp',
+                theme: 'light'
+            });
+
+            tippy('#copy_button', {
+                content: 'Copied !',
+                theme: 'light',
+                trigger: 'click',
+                duration: 250
+            });
+
+
+        }
+        $('[data-callLang]').on('click', function () {
+            //change flag to selected language
+
+            if ($(this).attr('data-callLang') === "en") {
+                window.location.href = window.location.toString().split(/\?|#/)[0];
+                return false;
+            }
+
+            window.location.hash = $(this).attr('data-callLang')
+            location.reload(true);
+        });
+    </script>
+
+</body>
+
+</html>
