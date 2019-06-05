@@ -104,6 +104,7 @@ function hideSection3() {
 function generateLink() {
 	var generateConform = document.getElementsByClassName('generateConform');
 	section3.style.display = 'block';
+	section3.scrollIntoView(true);
 	generateConform[0].style.display = 'none';
 	generateConformShown = false;
 }

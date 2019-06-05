@@ -790,9 +790,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .resultPage {
 	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
+	position: absolute;
+
 	width: 100%;
 	height: 100%;
 	padding: 15px;
@@ -800,7 +799,6 @@ input[type=number]::-webkit-outer-spin-button {
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 	box-sizing: border-box; /* Opera/IE 8+ */
-	overflow-y: auto;
 }
 
 .resultPage .mainContainer {
@@ -959,5 +957,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 	.left_side select {
 		width: 70px;
+	}
+
+	.resultPage {
+		position: relative;
+		height: auto;
 	}
 }
