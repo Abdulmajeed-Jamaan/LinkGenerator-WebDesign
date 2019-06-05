@@ -1,6 +1,7 @@
 # Web Design - LinkGenerator
 
-## Preview
+## [Preview](https://abdulmajeed-jamaan.github.io/WebDesign-LinkGenerator/)
+
 ![](https://raw.githubusercontent.com/Abdulmajeed-Jamaan/LinkGenerator-WebDesign/master/ReadMe-images/page1.JPG)
 ![](https://raw.githubusercontent.com/Abdulmajeed-Jamaan/LinkGenerator-WebDesign/master/ReadMe-images/page2.JPG)
 ![](https://raw.githubusercontent.com/Abdulmajeed-Jamaan/LinkGenerator-WebDesign/master/ReadMe-images/page3.JPG)
