@@ -41,7 +41,7 @@ var dictionary = {
 		<span id="linkType" class="whatsApp" onclick="linkTypes()" style="color:#39065a;">مختصر</span> خاص بك.
 		<div id="dropdown-menu" class="dropdown-menu">
 		<ul>
-		<li data-language="sub-title-short"><a href="whatsapp.html">الواتس اب</a></li>
+		<li data-language="sub-title-short"><a href="index.html">الواتس اب</a></li>
 		</ul>
 		</div>`,
 
