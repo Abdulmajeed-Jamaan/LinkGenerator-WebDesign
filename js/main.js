@@ -30,43 +30,22 @@ function outSidemodel(e) {
 //----------------------- show (RESET) conform pop up ---------------------------
 //-----------------------------------------------------------------------------
 
-var resetConformShown = false;
-function conformReset() {
-	var resetConform = document.getElementsByClassName('resetAllConform');
-	var btnReset = document.getElementById('btn-resetAll');
-	var rect = btnReset.getBoundingClientRect();
-
-	if (!resetConformShown) {
-		if (window.innerWidth <= 450) {
-		} else {
-			resetConform[0].style.top = rect.top - 110 + 'px';
-			resetConform[0].style.left = rect.left - 100 + 'px';
-		}
-		resetConform[0].style.display = 'block';
-		resetConformShown = true;
-	} else {
-		resetConform[0].style.display = 'none';
-		resetConformShown = false;
-	}
-}
-
 function resetFields() {
-	var textarea = document.getElementById('textArea');
-	var resetConform = document.getElementsByClassName('resetAllConform');
-	textarea.value = '';
-	update();
+	if (document.getElementById('textArea')) {
+		document.getElementById('phone_number').value = '';
+		document.getElementById('email').value = '';
+		document.getElementById('textArea').value = '';
 
-	document.getElementById('phone_number').value = '';
-	document.getElementById('email').value = '';
-
-	resetConform[0].style.display = 'none';
-	resetConformShown = false;
+		update();
+	} else {
+		document.getElementById('url-input').value = '';
+		document.getElementById('email').value = '';
+	}
+	$('#btn-resetAll').click();
 }
 
 function dontResetFields() {
-	var resetConform = document.getElementsByClassName('resetAllConform');
-	resetConform[0].style.display = 'none';
-	resetConformShown = false;
+	$('#btn-resetAll').click();
 }
 
 //-----------------------------------------------------------------------------
@@ -75,68 +54,33 @@ function dontResetFields() {
 //----------------------- show (GENERATE) conform pop up ---------------------------
 //-----------------------------------------------------------------------------
 
-var generateConformShown = false;
-function conformGenerate() {
-	var generateConform = document.getElementsByClassName('generateConform');
-	var btnGenerate = document.getElementById('btn-generateLink');
-	var rect = btnGenerate.getBoundingClientRect();
-	var rect2 = generateConform[0].getBoundingClientRect();
+$('.popover-toggle').popover({
+	html: true
+});
 
-	if (!generateConformShown) {
-		if (!window.innerWidth <= 450) {
-			generateConform[0].style.top = rect.top - 110 + 'px';
-			generateConform[0].style.left = rect.left + 'px';
-		}
+$(document).on('click', '[data-dismiss=popover]', function() {
+	$($(this).data('target')).click();
+});
 
-		generateConform[0].style.display = 'block';
-		generateConformShown = true;
-	} else {
-		generateConform[0].style.display = 'none';
-		generateConformShown = false;
-	}
-}
+$('#btn-generateLink').popover();
+$('#btn-resetAll').popover();
 
 var section3 = document.getElementById('resultPage');
 
 function hideSection3() {
 	section3.style.display = 'none';
 }
+
 function generateLink() {
-	var generateConform = document.getElementsByClassName('generateConform');
 	section3.style.display = 'block';
 	section3.scrollIntoView(true);
-	generateConform[0].style.display = 'none';
-	generateConformShown = false;
+	$('#btn-generateLink').click();
 }
 
 function dontGenerateLink() {
-	var generateConform = document.getElementsByClassName('generateConform');
-
-	generateConform[0].style.display = 'none';
-	generateConformShown = false;
+	section3.style.display = 'none';
+	$('#btn-generateLink').click();
 }
-//-----------------------------------------------------------------------------
-
-//-----------------------------------------------------------------------------
-//-------------------- show (RESET Form 2) conform pop up ---------------------
-//-----------------------------------------------------------------------------
-
-function resetFields2() {
-	var resetConform = document.getElementsByClassName('resetAllConform');
-
-	document.getElementById('url-input').value = '';
-	document.getElementById('email').value = '';
-
-	resetConform[0].style.display = 'none';
-	resetConformShown = false;
-}
-
-function dontResetFields2() {
-	var resetConform = document.getElementsByClassName('resetAllConform');
-	resetConform[0].style.display = 'none';
-	resetConformShown = false;
-}
-
 //-----------------------------------------------------------------------------
 
 //-----------------------------------------------------------------------------

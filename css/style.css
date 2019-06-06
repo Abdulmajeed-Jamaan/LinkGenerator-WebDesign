@@ -4,6 +4,10 @@ body {
 	font-family: 'Cairo', sans-serif;
 }
 
+* {
+	font-family: 'Cairo', sans-serif !important;
+}
+
 .container {
 	margin: 0;
 	padding: 0;
@@ -64,7 +68,7 @@ body {
 	font-size: 35px;
 }
 
-.dropdown-menu {
+.dropdown-menu1 {
 	position: absolute;
 	z-index: 1000;
 	display: none;
@@ -84,22 +88,22 @@ body {
 	box-shadow: -1px 1px 9px -6px rgba(0, 0, 0, 0.75);
 }
 
-.dropdown-menu li {
+.dropdown-menu1 li {
 	cursor: pointer;
 	padding: 3px 20px;
 }
 
-.dropdown-menu li a,
-.dropdown-menu li a:link,
-.dropdown-menu li a:visited,
-.dropdown-menu li a:active {
+.dropdown-menu1 li a,
+.dropdown-menu1 li a:link,
+.dropdown-menu1 li a:visited,
+.dropdown-menu1 li a:active {
 	text-decoration: none;
 	width: 100%;
 	color: gray;
 	display: inline-block;
 }
 
-.dropdown-menu li:hover {
+.dropdown-menu1 li:hover {
 	background-color: #cccccc;
 }
 
@@ -276,65 +280,64 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0;
 }
 
-.btns #btn-moreOptions:hover,
-.btns #btn-moreOptions2:hover {
+.btns #btn-moreOptions:hover {
 	text-decoration: underline;
 	color: #1ebea5;
 }
-.btns #btn-resetAll,
-.btns #btn-resetAll2 {
+.btns #btn-resetAll {
 	margin-left: auto;
 	margin-right: 10px;
+	border: none;
+	background-color: white;
+	color: black;
 }
 
-.btns-AR #btn-resetAll,
-.btns-AR #btn-resetAll2 {
+.btns-AR #btn-resetAll {
 	margin-left: 10px;
 	margin-right: auto;
 }
 
-.btns #btn-resetAll:hover,
-.btns #btn-resetAll2:hover {
+.btns #btn-resetAll:hover {
 	background-color: rgba(128, 128, 128, 0.452);
 }
 
-.resetAllConform,
-.generateConform {
-	display: none;
-	position: absolute;
-	background-color: rgb(255, 255, 255);
-	z-index: 1060;
-
+.popover {
+	border: none;
+	position: absolute !important;
 	padding: 15px 20px;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box; /* Firefox, other Gecko */
-	box-sizing: border-box; /* Opera/IE 8+ */
+	border-radius: 0;
+	margin-bottom: 15px;
 	-webkit-box-shadow: -1px 1px 9px -6px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -1px 1px 9px -6px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px 1px 9px -6px rgba(0, 0, 0, 0.75);
 }
 
-.resetAllConform h3,
-.generateConform h3 {
-	margin: 0;
-	font-size: 14px;
-	color: gray;
-	margin-bottom: 15px;
+.popover-content {
+	display: flex;
+	justify-content: center;
 }
 
-.resetAllConform h5,
-.generateConform h5 {
-	display: inline-block;
+.popover button {
 	text-align: center;
-	margin: 0;
-	font-size: 12px;
 	width: 130px;
+	border-radius: 1px;
+	font-size: 12px;
 	padding: 10px 5px;
 	color: white;
 	border: none;
 	font-weight: bold;
 	transition: 0.5s;
 	cursor: pointer;
+	outline: none;
+}
+
+.popover-title {
+	margin: 0;
+	font-size: 14px;
+	color: gray;
+	background-color: #fff;
+	border: none;
+	text-align: center;
 }
 .yes {
 	margin-right: 5px;
@@ -352,16 +355,14 @@ input[type=number]::-webkit-outer-spin-button {
 .no:hover {
 	background-color: #e26c3d;
 }
-.btns #btn-generateLink,
-.btns #btn-generateLink2 {
+.btns #btn-generateLink {
 	background-color: #39065a;
 	color: white;
 	font-weight: 400;
 	border-radius: 3px;
 }
 
-.btns #btn-generateLink:hover,
-.btns #btn-generateLink2:hover {
+.btns #btn-generateLink:hover {
 	background-color: #652b8b;
 }
 /*
@@ -532,6 +533,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin-top: 30px;
 	display: flex;
 	justify-content: center;
+	background-color: white;
 }
 .mark h1 {
 	font-size: 16px;
@@ -585,7 +587,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0 auto;
 	color: white;
 	font-size: 18px;
-	padding: 10px 20px;
+	padding: 20px 20px !important;
 	font-weight: normal;
 	cursor: pointer;
 }
@@ -601,7 +603,7 @@ input[type=number]::-webkit-outer-spin-button {
 	margin: 0 0 0 auto;
 	color: white;
 	font-size: 18px;
-	padding: 10px 15px;
+	padding: 20px 15px;
 	cursor: pointer;
 	transition: 0.5s;
 }
@@ -629,7 +631,7 @@ input[type=number]::-webkit-outer-spin-button {
 	color: gray;
 }
 
-.dropdown-menu ul,
+.dropdown-menu1 ul,
 .dropdown-menu2 ul {
 	list-style: none;
 	padding: 0;
@@ -851,6 +853,15 @@ input[type=number]::-webkit-outer-spin-button {
 	color: gray;
 	min-width: 0;
 	height: auto;
+	overflow-x: auto;
+}
+
+.resultLink h6::-webkit-scrollbar {
+	height: 4px;
+}
+
+.resultLink h6::-webkit-scrollbar-thumb {
+	background-color: rgba(128, 128, 128, 0.527);
 }
 
 .resultLink svg {
@@ -945,13 +956,11 @@ input[type=number]::-webkit-outer-spin-button {
 		padding: 12px 5px;
 	}
 
-	.btns #btn-resetAll,
-	.btns #btn-resetAll2 {
+	.btns #btn-resetAll {
 		margin-right: 0;
 	}
 
-	.btns-AR #btn-resetAll,
-	.btns-AR #btn-resetAll2 {
+	.btns-AR #btn-resetAll {
 		margin-left: 0;
 	}
 

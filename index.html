@@ -16,10 +16,11 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
-
-
 
 </head>
 
@@ -38,7 +39,7 @@
 
                     <br>
                     <span id="linkType" class="whatsApp" onclick="linkTypes()">WhatsApp</span>
-                    <div id="dropdown-menu" class="dropdown-menu">
+                    <div id="dropdown-menu" class="dropdown-menu1">
                         <ul>
                             <li data-language="sub-title-short"><a href="short.html">Short</a></li>
                         </ul>
@@ -366,27 +367,20 @@
 
                             </div>
                         </div>
-                        <h6 id="btn-resetAll" onclick="conformReset()" data-language="btn-resetAll">RESET ALL</h6>
-                        <div class="resetAllConform fadeIn animated faster">
-                            <h3 data-language="conform-resetAll">Do you want to clear all data?</h3>
-                            <div class="yes_no">
-                                <h5 class="yes" onclick="resetFields()" data-language="btn-yes">Yes</h5>
-                                <h5 class="no" onclick="dontResetFields()" data-language="btn-no">No</h5>
-                            </div>
-                        </div>
-                        <h6 id="btn-generateLink" onclick="conformGenerate()" data-language="btn-generateLink">GENERATE
+                        <h6 id="btn-resetAll" role="button" data-title="Do you want to clear all data?"
+                            data-language="btn-resetAll"
+                            data-content="<button type='button' onclick='resetFields()' class=' yes reset-all'>Yes</button> <button type='button' onclick='dontResetFields()' class='no ' data-dismiss='popover' data-target='#reset-pop'>No</button>"
+                            data-placement="auto" data-trigger="click" class="btn btn-primary popover-toggle"
+                            aria-describedby="popover64960">RESET ALL</h6>
+
+
+                        <h6 id="btn-generateLink" role="button" data-language=btn-generateLink
+                            data-title="Link will be generated, do you want to continue?"
+                            data-content="<button type='button' onclick='generateLink()' class=' yes reset-all'>Yes</button> <button type='button' onclick='dontGenerateLink()' class='no ' data-dismiss='popover' data-target='#reset-pop'>No</button>"
+                            data-placement="auto" data-trigger="click" class="btn btn-primary popover-toggle"
+                            aria-describedby="popover64961">GENERATE
                             LINK</h6>
-                        <div class="generateConform fadeIn animated faster">
-                            <h3 data-language="conform-generateLink">Link will be generated, do you want to continue?
-                            </h3>
-                            <div class="yes_no">
 
-                                <!-- ___________________________Generate Link Button___________________________ -->
-                                <h5 class="yes" onclick="generateLink()" data-language="btn-yes">Yes</h5>
-
-                                <h5 class="no" onclick="dontGenerateLink()" data-language="btn-no">No</h5>
-                            </div>
-                        </div>
                     </div>
 
                 </form>
@@ -463,8 +457,8 @@
 
 
 
-        <section id="resultPage" class="resultPage fadeIn animated faster">
-            <div class="mainContainer">
+        <section id="resultPage" class="resultPage ">
+            <div class="mainContainer fadeIn animated fast">
                 <h1 data-language="site-name">Takkah</h1>
                 <hr>
                 <div class="subContainer">
@@ -481,7 +475,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <h6>https://YourDomain .com/ascwr54</h6>
+                        <h6>https://YourDomain.com/ascwr54</h6>
                     </div>
 
                     <div class="resultTypes">
@@ -511,7 +505,6 @@
 
 
 
-    <script src="js/main.js"></script>
     <script src="js/translate.js"></script>
     <script>
 
@@ -572,6 +565,8 @@
             location.reload(true);
         });
     </script>
+    <script src="js/main.js"></script>
+
 
 </body>
 

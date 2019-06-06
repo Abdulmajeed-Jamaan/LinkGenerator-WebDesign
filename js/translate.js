@@ -16,17 +16,20 @@ var dictionary = {
 		conform_resetAll: 'هل تود مسح جميع البيانات؟',
 		btn_generateLink: 'انشاء الرابط',
 		conform_generateLink: 'سوف يتم انشاء الرابط هل تود الاستمرار؟',
-		yes: 'نعم',
-		no: 'لا',
+		generateLink_dataContent:
+			"<button type='button' onclick='generateLink()' class=' yes '>نعم</button> <button type='button' onclick='dontGenerateLink()' class='no ' data-dismiss='popover' data-target='#reset-pop'>لا</button>",
+		resetAll_dataContent:
+			"<button type='button' onclick='resetFields()' class=' yes '>نعم</button> <button type='button' onclick='dontResetFields()' class='no ' data-dismiss='popover' data-target='#reset-pop'>لا</button>",
 		btn_preview: 'اسلوب العرض',
 		sender_preview: 'مرسل',
 		reciever_preview: 'مستقبل',
 		view_message_text: 'عرض النص هنا',
+
 		//_______________________WhatsApp Page___________________
 		title_whatsApp: `لنبني<strong> رابط</strong>
 		<br>
 		<span id="linkType" class="whatsApp" onclick="linkTypes()">الواتس اب</span> الخاص بك.
-		<div id="dropdown-menu" class="dropdown-menu">
+		<div id="dropdown-menu" class="dropdown-menu1">
 		<ul>
 		<li data-language="sub-title-short"><a href="short.html">مختصر</a></li>
 		</ul>
@@ -39,7 +42,7 @@ var dictionary = {
 		title_short: `لنبني<strong> رابط</strong>
 		<br>
 		<span id="linkType" class="whatsApp" onclick="linkTypes()" style="color:#39065a;">مختصر</span> خاص بك.
-		<div id="dropdown-menu" class="dropdown-menu">
+		<div id="dropdown-menu" class="dropdown-menu1">
 		<ul>
 		<li data-language="sub-title-short"><a href="index.html">الواتس اب</a></li>
 		</ul>
@@ -83,13 +86,14 @@ function whatsApp_AR_Lang() {
 	$('[data-language=btn-customLink]').text(dictionary.ar.btn_customLink);
 
 	$('[data-language=btn-resetAll]').text(dictionary.ar.btn_resetAll);
-	$('[data-language=conform-resetAll]').text(dictionary.ar.conform_resetAll);
+	$('[data-language=btn-resetAll]').attr('data-title', dictionary.ar.conform_resetAll);
+	$('[data-language=btn-resetAll]').attr('data-content', dictionary.ar.resetAll_dataContent);
 
 	$('[data-language=btn-generateLink]').text(dictionary.ar.btn_generateLink);
-	$('[data-language=conform-generateLink]').text(dictionary.ar.conform_generateLink);
+	$('[data-language=btn-generateLink]').attr('data-title', dictionary.ar.conform_generateLink);
+	$('[data-language=btn-generateLink]').attr('data-content', dictionary.ar.generateLink_dataContent);
 
-	$('[data-language=btn-yes]').text(dictionary.ar.yes);
-	$('[data-language=btn-no]').text(dictionary.ar.no);
+	$('[data-language=btn-generateLink]').text(dictionary.ar.btn_generateLink);
 
 	$('[data-language=btn-preview]').text(dictionary.ar.btn_preview);
 	$('[data-language=sender-view]').text(dictionary.ar.sender_preview);
@@ -134,10 +138,12 @@ function short_AR_Lang() {
 	$('[data-language=btn-customLink]').text(dictionary.ar.btn_customLink);
 
 	$('[data-language=btn-resetAll]').text(dictionary.ar.btn_resetAll);
-	$('[data-language=conform-resetAll]').text(dictionary.ar.conform_resetAll);
+	$('[data-language=btn-resetAll]').attr('data-title', dictionary.ar.conform_resetAll);
+	$('[data-language=btn-resetAll]').attr('data-content', dictionary.ar.resetAll_dataContent);
 
 	$('[data-language=btn-generateLink]').text(dictionary.ar.btn_generateLink);
-	$('[data-language=conform-generateLink]').text(dictionary.ar.conform_generateLink);
+	$('[data-language=btn-generateLink]').attr('data-title', dictionary.ar.conform_generateLink);
+	$('[data-language=btn-generateLink]').attr('data-content', dictionary.ar.generateLink_dataContent);
 
 	$('[data-language=btn-yes]').text(dictionary.ar.yes);
 	$('[data-language=btn-no]').text(dictionary.ar.no);
